@@ -11,16 +11,23 @@
   src: url(./fonts/CircularStd-LightItalic.otf);
   src: url(./fonts/CircularStd-MediumItalic.otf); */
 }
+
 body {
   font-family: "CircularStd-Medium";
 }
+
 button {
   font-family: "CircularStd-Light";
 }
+
 #shadow-white {
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5) !important;
 }
 
 #margin {
   margin-top: 120px;
+}
+
+#navbottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
