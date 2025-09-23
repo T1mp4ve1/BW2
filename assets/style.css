@@ -17,6 +17,22 @@ p {
   margin: 0;
 }
 
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* main */
+main {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #000;
+}
+
 #navTop {
   background-color: rgba(27, 28, 30, 0.951);
 }
@@ -39,7 +55,7 @@ button {
 }
 
 #bottom-menu {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)30%, rgba(0, 0, 0, 0.775) 60%, rgba(0, 0, 0, 0));
 }
 
