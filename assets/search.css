@@ -1,5 +1,9 @@
+.bg-mygrey {
+  background-color: #121212;
+}
+
 #margin {
-  margin-top: 90px;
+  margin-top: 110px;
 }
 
 /* barra di ricerca */
@@ -44,4 +48,11 @@
 #bottom-menu {
   margin-bottom: 25px;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+@media (min-width: 1200px) {
+  .mia-classe-xl {
+    margin-bottom: 9rem !important;
+    font-size: 2rem !important;
+  }
 }

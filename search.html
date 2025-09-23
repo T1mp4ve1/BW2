@@ -18,9 +18,9 @@
     <!-- myCSS link -->
     <link rel="stylesheet" href="./assets/search.css" />
   </head>
-  <body class="bg-black text-light">
+  <body class="bg-mygrey text-light">
     <!-- menu a tendina -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-black">
+    <nav class="navbar navbar-expand-lg fixed-top bg-mygrey d-xl-none">
       <div class="container-fluid mx-3 p-0">
         <div class="d-flex justify-content-between align-items-center w-100">
           <!-- left -->
@@ -43,27 +43,59 @@
     </nav>
     <!-- fine menu a tendina -->
 
+<!-- navBar per schermi xl -->
+<nav class="navbar bg-black d-none d-xl-flex fixed-top">
+  <div class="container-fluid text-light d-flex justify-content-between align-items-center">
+    
+    <!-- sinistra: icone -->
+    <div class="d-flex gap-2">
+      <i class="bi bi-caret-left fs-3"></i>
+      <i class="bi bi-caret-right fs-3"></i>
+    </div>
+
+    <!-- centro: barra di ricerca -->
+    <div class="flex-grow-1 d-flex justify-content-center gap-4 align-items-center">
+      <button class="btn bg-dark rounded-circle"><i class="bi bi-house-door text-light "></i></button>
+        <form class="d-flex" role="search">
+        <div class="search-bar">
+          <i class="bi bi-search"></i>
+          <input class="form-control border-0 bg-transparent text-light " type="search" placeholder="Cosa vuoi ascoltare?" aria-label="Search"/>
+        | <i class="bi bi-collection-play-fill ms-3"></i>
+        </div>
+      </form>
+    </div>
+
+    <!-- destra: spazio vuoto o altre icone -->
+    
+    
+  </div>
+</nav>
+
+
+
+
+
 <!-- sezione Cerca con barra -->
     <section id="margin">
     <div class="container-fluid ">
-    <h2 class=" display-5 fw-semibold">Cerca</h2>
+    <h2 class=" display-5 fw-semibold d-xl-none">Cerca</h2>
 <!-- Barra di ricerca -->
-  <div class="search-bar my-4">
+  <div class="search-bar my-4 d-xl-none">
     <i class="bi bi-search"></i>
     <input type="text" placeholder="Cosa vuoi ascoltare?">
   </div>
 <!-- fine barra di ricerca -->
 
 <!-- inizio discover con cards -->
- <h3 class=" mt-4 mb-3 text-center fw-semibold">Sfoglia tutto</h3>
+ <h3 class=" mt-5 mb-4 text-center text-xl-start fw-semibold">Sfoglia tutto</h3>
 <!-- cards -->
- <div class="row gy-3">
+ <div class="row gy-3 gy-xl-4">
 
     <!-- card 1 -->
-<div class="col-6">
+<div class="col-6 col-xl-3">
     <div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -71,25 +103,25 @@
 </div>
 
 <!-- card 2 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
   </div>
     </div>
 <!-- card 3 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
   </div>
     </div>
 <!-- card 4 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -97,9 +129,9 @@
   </div>
     </div>
 <!-- card 5 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -107,9 +139,9 @@
   </div>
     </div>
 <!-- card 6 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -117,9 +149,9 @@
   </div>
     </div>
 <!-- card 7 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -127,9 +159,9 @@
   </div>
     </div>
 <!-- card 8 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -137,9 +169,9 @@
   </div>
     </div>
 <!-- card 9 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -147,9 +179,63 @@
   </div>
     </div> 
 <!-- card 10 -->
-<div class="col-6"><div class="card position-relative text-light bg-warning overflow-hidden">
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
         <div class="card-body">
-    <h5 class="card-title mb-5 ">Podcast</h5>
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 11 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 12 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 13 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 14 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 15 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
+  </div>
+
+<img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
+  </div>
+    </div>
+<!-- card 16 -->
+<div class="col-6 col-xl-3"><div class="card position-relative text-light bg-warning overflow-hidden">
+        <div class="card-body">
+    <h5 class="card-title mb-5 mia-classe-xl ">Podcast</h5>
   </div>
 
 <img class="card-image" src="./assets/imgs/search/image-2.jpg" alt="copertina playlist" >
@@ -161,7 +247,7 @@
 </div><!-- fine conteiner fluid -->
 
 <!-- footer -->
-  <footer>
+  <footer class="d-xl-none">
       <!-- nav bottom -->
       <nav id="bottom-menu" class="navbar navbar-expand-lg fixed-bottom">
         <div class="container-fluid mx-3 p-0">
