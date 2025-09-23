@@ -129,39 +129,46 @@
             <!-- Main (desktop center) -->
             <main class="col-lg-7">
 
-                <div class="container-fluid d-flex justify-content-between">
-                    <div class="text-secondary">
-                        <i class="bi bi-caret-left-square fs-2"></i>
-                        <i class="bi bi-caret-right-square fs-2"></i>
+                <div class="container-fluid d-flex justify-content-between align-items-center my-4">
+                    <div class="text-secondary d-flex align-items-center">
+                        <i class="bi bi-caret-left fs-2"></i>
+                        <i class="bi bi-caret-right fs-2"></i>
                     </div>
-                    <div>
-                        <div class="row">
-                            <img src="assets/imgs/main/image-12.jpg" class="col-1 img-fluid rounded-5">
-                            <p class="col-10">Lidia Nautelia Consumum</p>
-                            <i class="col-1 bi bi-caret-down-fill"></i>
-                        </div>
+                    <div class="bg-black rounded-5 d-flex justify-content-end align-items-center" style="width:150px; height: 30px;">
+                        <img src="assets/imgs/main/image-12.jpg" class="img-fluid rounded-5"
+                            style="width:28px; height:28px; object-fit:cover;">
+                        <p class="ms-2 fw-bold text-truncate lidia-p">Lidia Nautelia Consumum</p>
+                        <i class="bi bi-caret-down-fill px-2"></i>
                     </div>
                 </div>
 
                 <!-- VIOLA -->
                 <div class="container-fluid d-flex justify-content-between">
-                    <div class="card mb-3">
+                    <div class="card border-0 w-100 mb-3 text-light p-3 position-relative" id="cardCenter">
+                        <p id="annunci" class="btn position-absolute text-secondary end-0 me-3  p-2 rounded-5 shadow">
+                            NASCONDI ANNUNCI</p>
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="assets/imgs/main/image-12.jpg" class="img-fluid rounded-start" alt="...">
+                            <div class="col-md-3">
+                                <img src="assets/imgs/main/image-12.jpg" class="img-fluid" alt="...">
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">VIOLA</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                            ago</small></p>
+                            <div class="col-md-9 d-flex align-items-center">
+                                <div class="card-body p-0 ms-3">
+                                    <p><small>ALBUM</small></p>
+                                    <h5 class="card-title fw-bold display-3">VIOLA (feat.Salmo)</h5>
+                                    <p class="card-text mb-2">Fedez, Salmo</p>
+                                    <p class="card-text mb-2">Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                                    <div class="d-flex justify-content-start">
+                                        <button class="btn btn-success rounded-5 px-4 me-3">Play</button>
+                                        <button
+                                            class="btn btn-black rounded-5  px-4  me-3 text-light border">Salva</button>
+                                        <i class="bi bi-three-dots fs-3 d-flex align-items-center"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!-- buonasera -->
                 <section class="mt-lg-0" id="margin">
                     <div class="container-fluid d-flex justify-content-between align-items-center my-3">

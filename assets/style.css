@@ -33,6 +33,21 @@ main {
   scrollbar-color: #444 #000;
 }
 
+/* card center */
+#cardCenter {
+  background: linear-gradient(185deg, #00000000, #000000 100%);
+}
+
+#annunci {
+  font-size: 0.6rem;
+}
+
+/* lidia */
+.lidia-p {
+  font-size: 0.7rem;
+}
+
+
 #navTop {
   background-color: rgba(27, 28, 30, 0.951);
 }
