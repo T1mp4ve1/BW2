@@ -12,6 +12,11 @@
   src: url(./fonts/CircularStd-MediumItalic.otf); */
 }
 
+/* general */
+p {
+  margin: 0;
+}
+
 #navTop {
   background-color: rgba(27, 28, 30, 0.951);
 }
@@ -50,6 +55,7 @@ button {
   background: linear-gradient(150deg, #3f3f3f, #212529 40%);
 } */
 
+/* left desktop */
 aside.fixed-start {
   position: fixed;
   top: 0;
@@ -58,10 +64,25 @@ aside.fixed-start {
   overflow: hidden;
 }
 
+/* list */
+#leftList {
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #000;
+}
+
+
+/* right desktop */
 section.fixed-end {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   overflow: hidden;
+}
+
+/* card */
+.desktopRightCard p {
+  font-size: 0.8rem;
 }
