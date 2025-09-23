@@ -54,7 +54,6 @@ body {
 /* Tracklist */
 .tracklist {
     margin-top: 1rem;
-    max-height: 400px;
     /* altezza scroll mobile */
     overflow-y: auto;
     padding-right: 5px;
@@ -116,4 +115,9 @@ body {
     .tracklist {
         flex: 1;
     }
+}
+
+#cover-arrow {
+    margin-top: 60px;
+    margin-left: 14px;
 }

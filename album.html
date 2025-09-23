@@ -13,10 +13,11 @@
 </head>
 
 <body class="bg-black text-light">
-    <div class="container py-3">
+    <div class="container pt-5">
+        <span id="cover-arrow position-absolute"><i class="bi bi-arrow-left position-absolute text-white"></i></span>
 
         <!-- Copertina Album -->
-        <div class="text-center">
+        <div class="text-center p-5 pt-0 d-flex position-relative">
             <img src="./assets/imgs/main/image-20.jpg" alt="Cover Album" class="album-cover mb-3">
         </div>
 
@@ -39,13 +40,12 @@
         <!-- Controlli principali -->
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div class="d-flex gap-2">
-                <span><i class="bi bi-heart fs-1"></i></span>
-                <button class="btn btn-outline-light btn-circle"><i class="bi bi-arrow-down"></i></button>
-                <button class="btn btn-outline-black bg-black text-white"><i
-                        class="bi bi-three-dots-vertical"></i></button>
+                <span class="me-3"><i class="bi bi-heart fs-1 "></i></span>
+                <span class="me-3"><i class="bi bi-arrow-down-circle fs-1"></i></span>
+                <span><i class="bi bi-three-dots-vertical fs-1"></i></span>
 
             </div>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 align-items-center gap-3">
                 <span><i class="bi bi-shuffle fs-1"></i></span>
                 <button class="play-btn"><i class="bi bi-play-fill"></i></button>
             </div>
@@ -68,33 +68,29 @@
                     <span class="track-title fw-bold text-white">Please Please Please</span><br>
                     <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina Carpenter</span>
                 </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
             </div>
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-three-dots-vertical text-white"></i>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Good Graces</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
             </div>
-        </div>
 
-        <div class="track d-flex justify-content-between align-items-center">
-            <div>
-                <span class="track-title fw-bold text-white">Good Graces</span><br>
-                <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina Carpenter</span>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Sharpest Tool</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
             </div>
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-three-dots-vertical text-white"></i>
-            </div>
-        </div>
-
-        <div class="track d-flex justify-content-between align-items-center">
-            <div>
-                <span class="track-title fw-bold text-white">Sharpest Tool</span><br>
-                <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina Carpenter</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-three-dots-vertical text-white"></i>
-            </div>
-        </div>
-
-        <div class="tracklist">
             <div class="track d-flex justify-content-between align-items-center">
                 <div>
                     <span class="track-title fw-bold text-white">Coincidence</span><br>
@@ -104,134 +100,128 @@
                     <i class="bi bi-three-dots-vertical text-white"></i>
                 </div>
             </div>
-
-            <div class="tracklist">
-                <div class="track d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="track-title fw-bold text-white">Bed Chem</span><br>
-                        <span class="track-artist text-secondary">Sabrina Carpenter</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-three-dots-vertical text-white"></i>
-                    </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Bed Chem</span><br>
+                    <span class="track-artist text-secondary">Sabrina Carpenter</span>
                 </div>
-
-                <div class="track d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="track-title fw-bold text-white">Espresso</span><br>
-                        <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                            Carpenter</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-three-dots-vertical text-white"></i>
-                    </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
                 </div>
+            </div>
 
-                <div class="track d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="track-title fw-bold text-white">Dumb & Poetic</span><br>
-                        <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                            Carpenter</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-three-dots-vertical text-white"></i>
-                    </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Espresso</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
                 </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
 
-                <div class="tracklist">
-                    <div class="track d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="track-title fw-bold text-white">Slim Pickins</span><br>
-                            <span class="track-artist text-secondary">Sabrina Carpenter</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-three-dots-vertical text-white"></i>
-                        </div>
-                    </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Dumb & Poetic</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Slim Pickins</span><br>
+                    <span class="track-artist text-secondary">Sabrina Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
 
 
-                    <div class="track d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="track-title fw-bold text-white">Juno</span><br>
-                            <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                                Carpenter</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-three-dots-vertical text-white"></i>
-                        </div>
-                    </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Juno</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Lie To Girls</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Don't Smile</span><br>
+                    <span class="track-artist text-secondary">Sabrina Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">15 Minutes</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Couldn't Make It Any Harder</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Busy Woman</span><br>
+                    <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
+                        Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+            <div class="track d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="track-title fw-bold text-white">Bad Reviews</span><br>
+                    <span class="track-artist text-secondary">Sabrina Carpenter</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-three-dots-vertical text-white"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
-                    <div class="track d-flex justify-content-between align-items-center">
-                        <div>
-                            <span class="track-title fw-bold text-white">Lie To Girls</span><br>
-                            <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                                Carpenter</span>
-                        </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-three-dots-vertical text-white"></i>
-                        </div>
-                    </div>
 
-                    <div class="tracklist">
-                        <div class="track d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="track-title fw-bold text-white">Don't Smile</span><br>
-                                <span class="track-artist text-secondary">Sabrina Carpenter</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-three-dots-vertical text-white"></i>
-                            </div>
-                        </div>
 
-                        <div class="track d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="track-title fw-bold text-white">15 Minutes</span><br>
-                                <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                                    Carpenter</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-three-dots-vertical text-white"></i>
-                            </div>
-                        </div>
 
-                        <div class="track d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="track-title fw-bold text-white">Couldn't Make It Any Harder</span><br>
-                                <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                                    Carpenter</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-three-dots-vertical text-white"></i>
-                            </div>
-                        </div>
-
-                        <div class="track d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="track-title fw-bold text-white">Busy Woman</span><br>
-                                <span class="track-artist text-secondary"><span class="explicit">E</span> Sabrina
-                                    Carpenter</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-three-dots-vertical text-white"></i>
-                            </div>
-                        </div>
-
-                        <div class="tracklist">
-                            <div class="track d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="track-title fw-bold text-white">Bad Reviews</span><br>
-                                    <span class="track-artist text-secondary">Sabrina Carpenter</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-three-dots-vertical text-white"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
