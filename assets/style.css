@@ -12,8 +12,13 @@
   src: url(./fonts/CircularStd-MediumItalic.otf); */
 }
 
+#navTop {
+  background-color: rgba(27, 28, 30, 0.951);
+}
+
 body {
   font-family: "CircularStd-Medium";
+  background-color: rgba(21, 23, 26, 0.951);
 }
 
 button {
@@ -30,5 +35,33 @@ button {
 
 #bottom-menu {
   margin-bottom: 25px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)30%, rgba(0, 0, 0, 0.775) 60%, rgba(0, 0, 0, 0));
+}
+
+#bootom-top {
+  margin-bottom: 120px;
+}
+
+#playPanel {
+  background-color: rgba(55, 58, 63, 0.951);
+}
+
+/* .card {
+  background: linear-gradient(150deg, #3f3f3f, #212529 40%);
+} */
+
+aside.fixed-start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+section.fixed-end {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
