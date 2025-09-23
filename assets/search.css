@@ -1,0 +1,64 @@
+/* classe per il colore di back ground di spotify */
+.bg-mygrey {
+  background-color: #121212;
+}
+
+/* margine per la navbar fixed */
+#margin {
+  margin-top: 110px;
+}
+
+/* barra di ricerca */
+.search-bar {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* sistemo parametri all`interno della barra */
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar i {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* posizione e altre caratteristiche delle img nelle card */
+.card img {
+  transform: rotate(30deg);
+  position: absolute;
+  right: -20px;
+  bottom: -5px;
+  border-radius: 5px;
+  width: 45%;
+  height: auto;
+}
+
+/* menu sotto */
+#bottom-menu {
+  margin-bottom: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* media query necessaria per aumentare la grandezza delle card e il fs all`interno */
+@media (min-width: 1200px) {
+  .mia-classe-xl {
+    margin-bottom: 9rem !important;
+    font-size: 2rem !important;
+  }
+}
