@@ -110,3 +110,9 @@ p {
 .icon-toggle-heart input:checked + i {
   color: #1db954;
 }
+#bootom-top {
+  margin-bottom: 120px;
+}
+#playPanel {
+  background-color: rgba(55, 58, 63, 0.951);
+}
