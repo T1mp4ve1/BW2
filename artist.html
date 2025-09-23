@@ -11,383 +11,642 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/artist.css" />
+    <!-- BootstrapIcons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   </head>
 
   <body class="bg-dark text-light">
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid mx-3 p-0">
-        <div class="d-flex justify-content-between align-items-center w-100">
-          <!-- left -->
-          <div class="d-flex justify-content-between align-items-center gap-2">
-            <p class="text-black m-0 fs-5" style="font-family: unset">0:45</p>
-            <!-- moon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-moon text-black" viewBox="0 0 16 16">
-              <path
-                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
-              />
-            </svg>
-            <!-- instagram -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram text-black" viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-              />
-            </svg>
-            <!-- arrow -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              fill="currentColor"
-              class="bi bi-file-arrow-down-fill text-black"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5"
-              />
-            </svg>
-            <!-- square -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="text-black bi bi-square-fill" viewBox="0 0 16 16">
-              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
-            </svg>
-            <!-- dot -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="text-black bi bi-dot" viewBox="0 0 16 16">
-              <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
-            </svg>
-          </div>
-          <!-- right -->
-          <div class="d-flex gap-2">
-            <!-- reception -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-reception-4 text-black" viewBox="0 0 16 16">
-              <path
-                d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-            <!-- wi-fi -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wifi text-black" viewBox="0 0 16 16">
-              <path
-                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"
-              />
-              <path
-                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"
-              />
-            </svg>
-            <!-- battery -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-battery-low text-black" viewBox="0 0 16 16">
-              <path d="M2 6h2v4H2z" />
-              <path
-                d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- card-artist -->
-    <section id="artist">
-      <div id="card" class="card card-fullscreen d-flex position relative">
-        <a href="#">
-          <svg
-            id="svgCard"
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="currentColor"
-            class="bi bi-arrow-left-circle-fill position-absolute text-secondary"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
-            />
-          </svg>
-        </a>
-        <!-- immagine -->
-        <img src="assets/imgs/main/image-4.jpg" alt="" />
-        <!-- card body -->
-
-        <p id="pCard" class="card-title position-absolute bottom-0 start-0 text-white m-2 p-2">Peacefull Piano</p>
-      </div>
-    </section>
-
-    <section class="mt-3">
-      <div class="container-fluid">
-        <div>
-          <p class="text-secondary fw-semibold fs-5">3000 ascoltatori mensili</p>
-        </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <!-- left -->
-          <div class="d-flex gap-5 align-items-center">
-            <button class="btn bg-dark rounded-pill"><a class="text-light text-decoration-none fw-bold fs-4" href="#">Seguiti </a></button>
-            <!-- dots-vertical -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-          <!-- right -->
-          <div class="d-flex gap-4 align-items-center">
-            <!-- arrow -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shuffle text-success" viewBox="0 0 16 16">
-              <path
-                fill-rule="evenodd"
-                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
-              />
-              <path
-                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
-              />
-            </svg>
-            <!-- play -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              fill="currentColor"
-              class="bi bi-play-circle-fill text-success bg-white rounded-circle"
-              viewBox="0 0 16 16"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Brani che ti piacciono -->
-    <section class="container-fluid mt-4 d-flex">
+    <div class="container-fluid">
       <div class="row">
-        <!-- left img -->
-        <div class="col-2">
-          <img class="w-100 rounded-circle" src="assets/imgs/main/image-12.jpg" alt="" />
-        </div>
-        <!-- right text -->
-        <div class="col-10 d-flex flex-column justify-content-center p-0">
-          <p class="m-0 fs-5">Brani che ti piacciono</p>
-          <p class="m-0 text-secondary">8 brani di artista</p>
-        </div>
-      </div>
-    </section>
+        <!-- void -->
+        <div class="d-none d-lg-block col-lg-3 bg-black fixed-start"></div>
 
-    <!-- brani nella playlist -->
-    <section class="container-fluid mt-4">
-      <p class="fw-bold fs-2 mb-4">Popolari</p>
-      <div class="container-fluid">
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- secondo -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!--terzo  -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- quarto -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- quinto -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- sesto -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- settimo -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-        <!-- ottavo -->
-        <div class="row d-flex mb-4">
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <p>1</p>
-          </div>
-          <div class="col-2">
-            <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
-          </div>
-          <div class="col-8 d-flex flex-column justify-content-center p-0">
-            <p class="m-0 fs-4 fw-semibold">Titolo</p>
-            <p class="m-0 fs-5 text-secondary">3000</p>
-          </div>
-          <div class="col-1 d-flex justify-content-center align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- left desktop -->
+        <aside class="d-none d-lg-block col-lg-3 bg-black fixed-start">
+          <div class="container h-100 d-flex flex-column">
+            <i class="bi bi-three-dots fs-3"></i>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-house-door-fill fs-2"></i>
+              <p class="m-0 ms-4">Home</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-search fs-2"></i>
+              <p class="m-0 ms-4">Cerca</p>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="bi bi-collection-play fs-2"></i>
+              <p class="m-0 ms-4">La tua libreria</p>
+            </div>
 
-    <!-- footer -->
-    <footer>
-      <!-- nav bottom -->
-      <nav id="bottom-menu" class="navbar navbar-expand-lg fixed-bottom">
-        <div class="container-fluid mx-3 p-0">
-          <div class="container">
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <div id="navbottom" class="d-flex justify-content-around w-100">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-plus-square-fill fs-2"></i>
+              <p class="m-0 ms-4">Crea playlist</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-heart-fill fs-2"></i>
+              <p class="m-0 ms-4">Brani che ti piacciono</p>
+            </div>
+            <div class="d-flex align-items-center border-bottom border-secondary pb-2">
+              <i class="bi bi-bookmark-fill fs-2"></i>
+              <p class="m-0 ms-4">I tuoi episodi</p>
+            </div>
+
+            <div id="leftList">
+              <ul class="list-group bg-black" id="scrollable">
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">An item</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">A second item</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">A third item</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">A fourth item</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">And a fifth one</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">sit amet consectetur adipisicing elit.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">consectetur</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">
+                  optio, voluptates soluta quasi nostrum mollitia. Omnis deserunt saepe inventore.
+                </li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">Sequi repudiandae, tenetur</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">Eligendi, sit!</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">laboriosames solutadeserunt saepe inventore.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">voluptates eligendi dolorem et, iusto ea alias beatae eos dolore</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">Omnis deserunt saepe inventore.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">optio, voluptates soluta</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">
+                  voluptates soluta quasi nostrum mollitia. Omnis deserunt saepe inventore.
+                </li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">soluta quasi saepe inventore.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">nostrum</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">optioquasi inventore.</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">mollitia</li>
+                <li class="list-group-item bg-black border-0 text-secondary text-truncate">Omnis deserunt saepe inventore.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main (desktop center) -->
+        <main class="col-lg-7 p-0">
+          <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid mx-3 p-0">
+              <div class="d-flex justify-content-between align-items-center w-100">
+                <!-- left -->
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                  <p class="text-black m-0 fs-5" style="font-family: unset">0:45</p>
+                  <!-- moon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-moon text-black" viewBox="0 0 16 16">
                     <path
-                      d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                      d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
                     />
                   </svg>
-                  <p>Home</p>
+                  <!-- instagram -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-instagram text-black" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    />
+                  </svg>
+                  <!-- arrow -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-file-arrow-down-fill text-black"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5"
+                    />
+                  </svg>
+                  <!-- square -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="text-black bi bi-square-fill" viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
+                  </svg>
+                  <!-- dot -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="text-black bi bi-dot" viewBox="0 0 16 16">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                  </svg>
                 </div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <!-- right -->
+                <div class="d-flex gap-2">
+                  <!-- reception -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-reception-4 text-black" viewBox="0 0 16 16">
                     <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"
                     />
                   </svg>
-                  <p>Cerca</p>
+                  <!-- wi-fi -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-wifi text-black" viewBox="0 0 16 16">
+                    <path
+                      d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"
+                    />
+                    <path
+                      d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"
+                    />
+                  </svg>
+                  <!-- battery -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-battery-low text-black" viewBox="0 0 16 16">
+                    <path d="M2 6h2v4H2z" />
+                    <path
+                      d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"
+                    />
+                  </svg>
                 </div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-collection-play" viewBox="0 0 16 16">
+              </div>
+            </div>
+          </nav>
+          <!-- card-artist -->
+          <section id="artist">
+            <div id="card" class="card card-fullscreen d-flex position relative">
+              <a class="d-lg-none" href="#">
+                <svg
+                  id="svgCard"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-arrow-left-circle-fill position-absolute text-secondary"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+                  />
+                </svg>
+              </a>
+              <div class="d-none d-lg-flex">
+                <!-- arrow lg -->
+                <div class="d-flex gap-5">
+                  <a class="bg-black" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="currentColor"
+                      class="bi bi-caret-left position-absolute text-secondary mt-3 ms-4"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="currentColor"
+                      class="bi bi-caret-right position-absolute text-secondary mt-3 ms-4"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <!-- dropdown lg -->
+                <div id="dropdownCard" class="d-flex position-absolute align-items-center mt-3">
+                  <img id="dropdownImg" class="rounded-circle" src="assets/imgs/main/image-19.jpg" alt="" />
+
+                  <div class="dropdown">
+                    <button class="btn btn-link text-light text-decoration-none dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">Action</button></li>
+                      <li><button class="dropdown-item" type="button">Another action</button></li>
+                      <li><button class="dropdown-item" type="button">Something else here</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <p id="pLg" class="position-absolute text-light"><i class="bi bi-patch-check-fill text-primary fs-3"></i>Artista verificato</p>
+                </div>
+              </div>
+
+              <!-- immagine -->
+
+              <img class="d-lg-none mr-2" src="assets/imgs/main/image-6.jpg" alt="" />
+              <img id="imgCard" class="d-none d-lg-block" src="assets/imgs/main/image-4.jpg" alt="" />
+              <!-- card body -->
+              <p id="pCard" class="card-title position-absolute bottom-0 start-0 text-white m-2 p-2">Peacefull Piano</p>
+            </div>
+          </section>
+
+          <section class="mt-3">
+            <div class="container-fluid">
+              <div>
+                <p class="text-secondary fw-semibold fs-5">3000 ascoltatori mensili</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <!-- left -->
+                <div class="d-flex gap-5 align-items-center">
+                  <button class="btn bg-dark rounded-pill"><a class="text-light text-decoration-none fw-bold fs-4" href="#">Seguiti </a></button>
+                  <!-- dots-vertical -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+                <!-- right -->
+                <div class="d-flex gap-4 align-items-center">
+                  <!-- arrow -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shuffle text-success" viewBox="0 0 16 16">
                     <path
-                      d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848z"
+                      fill-rule="evenodd"
+                      d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
                     />
                     <path
-                      d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"
+                      d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
                     />
                   </svg>
-                  <p>La tua libreria</p>
+                  <!-- play -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    fill="currentColor"
+                    class="bi bi-play-circle-fill text-success bg-white rounded-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Brani che ti piacciono -->
+          <section class="container-fluid mt-4 d-flex">
+            <div class="row">
+              <!-- left img -->
+              <div class="col-2">
+                <img class="w-100 rounded-circle" src="assets/imgs/main/image-12.jpg" alt="" />
+              </div>
+              <!-- right text -->
+              <div class="col-10 d-flex flex-column justify-content-center p-0">
+                <p class="m-0 fs-5">Brani che ti piacciono</p>
+                <p class="m-0 text-secondary">8 brani di artista</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- brani nella playlist -->
+          <section class="container-fluid mt-4">
+            <p class="fw-bold fs-2 mb-4">Popolari</p>
+            <div class="container-fluid">
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- secondo -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!--terzo  -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- quarto -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- quinto -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- sesto -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- settimo -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+              <!-- ottavo -->
+              <div class="row d-flex mb-4">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <p>1</p>
+                </div>
+                <div class="col-3">
+                  <img class="w-100" src="assets/imgs/main/image-17.jpg" alt="" />
+                </div>
+                <div class="col-7 d-flex flex-column justify-content-center p-0">
+                  <p class="m-0 fs-4 fw-semibold">Titolo</p>
+                  <p class="m-0 fs-5 text-secondary">3000</p>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="d-lg-none">
+            <!-- nav bottom top -->
+            <section id="bootom-top" class="navbar navbar-expand-lg fixed-bottom">
+              <div class="container-fluid">
+                <div id="playPanel" class="d-flex flex-row p-3 justify-content-between rounded-4 border-0 text-light w-100">
+                  <!-- left -->
+                  <div class="d-flex justify-content-start align-items-center gap-2">
+                    <i class="bi bi-vinyl display-5"></i>
+                    <h2 class="m-0">Song Title</h2>
+                  </div>
+                  <!-- right -->
+                  <div class="d-flex justify-content-end align-items-center gap-4">
+                    <i class="bi bi-cassette display-5 text-secondary"></i>
+                    <i class="bi bi-heart display-5"></i>
+                    <i class="bi bi-play-circle display-5 ali"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- nav bottom center -->
+            <nav id="bottom-menu" class="navbar navbar-expand-lg fixed-bottom">
+              <div class="container-fluid d-flex justify-content-center align-items-center">
+                <div id="navbottom" class="row d-flex justify-content-center align-items-center w-100">
+                  <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-house-door-fill fs-1"></i>
+                    <p>Home</p>
+                  </div>
+                  <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-search fs-1"></i>
+                    <p>Cerca</p>
+                  </div>
+                  <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-collection-play fs-1"></i>
+                    <p>La tua libreria</p>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- nav bottom x 2 -->
+            <nav class="navbar navbar-expand-lg bg-black fixed-bottom text-secondary">
+              <div class="container-fluid mx-3 p-0">
+                <div class="d-flex justify-content-center align-items-center w-100">
+                  <div id="navbottom" class="d-flex justify-content-around w-75">
+                    <i class="bi bi-square-fill d-flex align-items-center"></i>
+                    <i class="bi bi-record-circle-fill d-flex align-items-center"></i>
+                    <i class="bi bi-caret-left-fill fs-3"></i>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </footer>
+          <footer class="player-bar bg-mygrey text-light fixed-bottom py-2 d-none d-lg-block bg-black">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+              <!-- sinistra: copertina e titolo -->
+              <div class="d-flex align-items-center gap-3">
+                <img src="./assets/imgs/main/image-1.jpg" alt="cover" width="50" class="rounded" />
+                <div>
+                  <p class="m-0 fw-semibold">Titolo canzone</p>
+                  <p class="m-0 fs-6">Artista</p>
+                </div>
+                <!-- cuore -->
+                <label class="icon-toggle-heart ms-3">
+                  <input type="checkbox" hidden />
+                  <i class="bi bi-heart"></i>
+                </label>
+              </div>
+              <!-- centro: controlli progress bar -->
+              <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+                <!-- controlli -->
+                <div class="d-flex align-items-center gap-3 mb-1">
+                  <!-- shuffle -->
+                  <label class="icon-toggle">
+                    <input type="checkbox" hidden />
+                    <i class="bi bi-shuffle"></i>
+                  </label>
+                  <i class="bi bi-skip-start-fill fs-4"></i>
+                  <i class="bi bi-play-circle-fill fs-2"></i>
+                  <i class="bi bi-skip-end-fill fs-4"></i>
+                  <!-- repeat -->
+                  <label class="icon-toggle">
+                    <input type="checkbox" hidden />
+                    <i class="bi bi-repeat"></i>
+                  </label>
+                </div>
+                <!-- barra progresso -->
+                <div class="d-flex align-items-center w-50 gap-2">
+                  <p class="m-0 fs-6">0:42</p>
+                  <div class="progress flex-grow-1" style="height: 4px">
+                    <div class="progress-bar bg-success" style="width: 25%"></div>
+                  </div>
+                  <p class="m-0 fs-6">3:15</p>
+                </div>
+              </div>
+
+              <!-- destra: microfono, coda, dispositivi, volume, fullscreen -->
+              <div class="d-flex align-items-center gap-3">
+                <!-- mic -->
+                <label class="icon-toggle">
+                  <input type="checkbox" hidden />
+                  <i class="bi bi-mic"></i>
+                </label>
+                <!-- coda -->
+                <label class="icon-toggle">
+                  <input type="checkbox" hidden />
+                  <i class="bi bi-list"></i>
+                </label>
+                <!-- dispositivi bluetooth -->
+                <label class="icon-toggle">
+                  <input type="checkbox" hidden />
+                  <i class="bi bi-speaker"></i>
+                </label>
+
+                <!-- volume -->
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-volume-up"></i>
+                  <div class="progress" style="width: 80px; height: 4px">
+                    <div class="progress-bar bg-light" style="width: 60%"></div>
+                  </div>
+                </div>
+                <!-- fullscreen -->
+                <label class="icon-toggle">
+                  <input type="checkbox" hidden />
+                  <i class="bi bi-arrows-fullscreen"></i>
+                </label>
+              </div>
+            </div>
+          </footer>
+        </main>
+
+        <!-- right desktop -->
+        <section class="d-none d-lg-block col-2 bg-black fixed-end">
+          <div class="d-flex my-4 justify-content-between">
+            <h5 class="fw-bold">Attivita' amici</h5>
+            <div class="d-flex gap-2 text-secondary">
+              <i class="bi bi-person-plus"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+
+          <div class="card bg-black text-secondary mb-3 desktopRightCard">
+            <div class="row">
+              <!-- left -->
+              <div class="col-2 pe-0">
+                <img src="assets/imgs/main/image-15.jpg" class="img-fluid rounded-5" alt="img" />
+              </div>
+              <!-- right -->
+              <div class="col-10 ps-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="fw-bold">Charlie Hookham</p>
+                    <p class="">In camera • Yumi Zouma</p>
+                    <p><i class="bi bi-vinyl"></i>EP III</p>
+                  </div>
+                  <div>
+                    <p class="fw-bold">4 ore</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
 
-      <nav class="navbar navbar-expand-lg bg-black fixed-bottom py-3">
-        <div class="container-fluid mx-3 p-0">
-          <div class="d-flex justify-content-center align-items-center w-100">
-            <div id="navbottom" class="d-flex justify-content-around w-75">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square-fill text-secondary" viewBox="0 0 16 16">
-                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-record-circle-fill text-secondary"
-                viewBox="0 0 16 16"
-              >
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-caret-left-fill text-secondary"
-                viewBox="0 0 16 16"
-              >
-                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-              </svg>
+          <div class="card bg-black text-secondary mb-3 desktopRightCard">
+            <div class="row">
+              <!-- left -->
+              <div class="col-2 pe-0">
+                <img src="assets/imgs/main/image-5.jpg" class="img-fluid rounded-5" alt="img" />
+              </div>
+              <!-- right -->
+              <div class="col-10 ps-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="fw-bold">Charlie Hookham</p>
+                    <p class="">In camera • Yumi Zouma</p>
+                    <p><i class="bi bi-vinyl"></i>EP III</p>
+                  </div>
+                  <div>
+                    <p class="fw-bold">4 ore</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </footer>
+
+          <div class="card bg-black text-secondary mb-3 desktopRightCard">
+            <div class="row">
+              <!-- left -->
+              <div class="col-2 pe-0">
+                <img src="assets/imgs/main/image-7.jpg" class="img-fluid rounded-5" alt="img" />
+              </div>
+              <!-- right -->
+              <div class="col-10 ps-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="fw-bold">Charlie Hookham</p>
+                    <p class="">In camera • Yumi Zouma</p>
+                    <p><i class="bi bi-vinyl"></i>EP III</p>
+                  </div>
+                  <div>
+                    <p class="fw-bold">4 ore</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
