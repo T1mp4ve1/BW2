@@ -19,16 +19,94 @@ body {
   object-fit: cover;
   border: none;
 }
+#imgCard {
+  height: 450px;
+  object-fit: cover;
+}
 #svgCard {
-  margin-top: 60px;
-  margin-left: 14px;
+  left: 14px;
+  top: 60px;
 }
 #pCard {
   font-size: 80px;
   font-weight: bold;
   word-wrap: break-word;
 }
+#dropdownCard {
+  right: 25px;
+}
+#dropdownImg {
+  height: 40px;
+}
+#pLg {
+  left: 14px;
+  top: 300px;
+}
 #bottom-menu {
   margin-bottom: 25px;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+/* left desktop */
+aside.fixed-start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* list */
+#leftList {
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #000;
+}
+
+/* right desktop */
+section.fixed-end {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* card */
+.desktopRightCard p {
+  font-size: 0.8rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* playpanel desktop */
+.icon-toggle {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-toggle input:checked + i {
+  color: #1db954;
+}
+
+.icon-toggle input:checked + i::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #1db954;
+}
+
+.icon-toggle-heart {
+  cursor: pointer;
+}
+
+.icon-toggle-heart input:checked + i {
+  color: #1db954;
 }
