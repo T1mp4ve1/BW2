@@ -121,3 +121,30 @@ body {
     margin-top: 60px;
     margin-left: 14px;
 }
+
+/*struttura della pagina lg*/
+aside.fixed-start {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+
+#leftList {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
+
+
+/*right desktop */
+section.fixed-end {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
