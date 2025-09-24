@@ -32,6 +32,10 @@ body {
   font-weight: bold;
   word-wrap: break-word;
 }
+#p2Card {
+  left: 20px;
+  top: 420px;
+}
 #dropdownCard {
   right: 25px;
 }
