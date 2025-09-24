@@ -171,7 +171,7 @@
                 </div>
 
                 <!-- buonasera -->
-                <section class="mt-lg-0" id="margin">
+                <section class="mt-lg-0">
                     <div class="container-fluid d-flex justify-content-between align-items-center my-3">
                         <!-- left-->
                         <h2 class="m-0 display-5 fw-semibold myTitle">Buonasera</h2>
@@ -191,7 +191,7 @@
                         <button class="btn bg-dark text-light rounded-pill"><a>Podcast e show</a></button>
                     </div>
 
-                    <div class="row gy-2">
+                    <div class="row gy-2 " id="marginRow">
 
                         <div class="col-6 col-lg-4">
                             <div class="card text-light bg-dark shadow border-0 overflow-hidden">
@@ -310,7 +310,7 @@
                 </section>
 
                 <!-- Altro di cio' -->
-                <section class="d-none d-lg-block">
+                <section class="d-none d-lg-block" id="altroSection">
                     <div class="container">
                         <h2 class="m-0 display-5 fw-semibold myTitle2">Altro di cio'che ti piace</h2>
                         <div class="row row-cols-5">
@@ -565,11 +565,14 @@
                         </div>
 
                         <!-- fullscreen -->
-                        <label class="icon-toggle">
-                            <input type="checkbox" hidden>
-                            <i class="bi bi-arrows-fullscreen"></i>
-                        </label>
+                        <button class="btn btn-sm btn-dark text-danger" id="closePlayPanel"><i
+                                class="bi bi-arrow-bar-down"></i></button>
                     </div>
+                </div>
+            </footer>
+            <footer class="d-none" id="minimazedPlayPannel">
+                <div class="container-fluid border-bottom">
+                    <i class="bi bi-arrow-bar-up btn btn-sm btn-dark text-success" id="minimazedPlayPannelBtn"></i>
                 </div>
             </footer>
 
@@ -659,6 +662,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="assets/JavaScript/scripts.js"></script>
 </body>
 
 </html>
