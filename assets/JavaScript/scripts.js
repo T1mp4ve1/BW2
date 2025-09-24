@@ -1,4 +1,4 @@
-const KEY = "140b5bbc7bmsh51c8ed9dcbd4be0p1d88b3jsn4c501496c5a1";
+const KEY = token;
 const HOST = "deezerdevs-deezer.p.rapidapi.com";
 const BASE = "https://deezerdevs-deezer.p.rapidapi.com";
 
@@ -30,7 +30,6 @@ async function fetchProva(query) {
   }
 }
 fetchProva("eminem");
-// ---------------------------------------------------------------------
 
 //----------------------------------------------------------------------close footer-play
 const playPanel = document.getElementById("footer-play");
@@ -52,21 +51,23 @@ minimazedPlayPannelBtn.addEventListener("click", () => {
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------add card artist
-// const card1 = document.getElementById("card1");
-// async function fetchProva(query, container) {
-//   try {
-//     const res = await fetch(`${BASE}/search?q=${query}`, headers);
-//     const data = await res.json();
-//     container.innerHTML = "";
-//     container.innerHTML = `<div class="card text-light p-2 bg-dark border-0 shadow-sm">
-//                                 <img src="${track.album.cover_medium}" class="card-img-top mb-2" alt="img">
-//                                     <div class="card-body p-0">
-//                                         <h6 class="card-title fw-bold">${track.title}</h6>
-//                                         <p class="card-text text-secondary">${track.artist.name}</p>
-//                                     </div>
-//                             </div>`;
-//   } catch (err) {
-//     console.error("Errore fetchProva:", err);
-//   }
-// }
-// fetchProva("SystemOfADown", card1);
+const card1 = document.getElementById("card1");
+async function fetchProva2(query, container) {
+  try {
+    const res = await fetch(`${BASE}/search?q=${query}`, headers);
+    const convertRes = await res.json();
+    const songs = convertRes.data;
+    console.log("NUOVO!!!!!:", songs);
+    container.innerHTML = "";
+    container.innerHTML = `<div class="card text-light p-2 bg-dark border-0 shadow-sm">
+                                <img src="${songs[5].album.cover_medium}" class="card-img-top mb-2" alt="img">
+                                    <div class="card-body p-0">
+                                        <h6 class="card-title fw-bold">${songs[5].title}</h6>
+                                        <p class="card-text text-secondary">dfgdf</p>
+                                    </div>
+                            </div>`;
+  } catch (err) {
+    console.error("Errore fetchProva:", err);
+  }
+}
+fetchProva2("SystemOfADown", card1);
