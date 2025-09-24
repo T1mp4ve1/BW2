@@ -1,150 +1,156 @@
 body {
-    background-color: #121212;
-    color: #fff;
-    font-family: "CircularStd-Medium", sans-serif;
-    margin: 0;
+  background-color: #121212;
+  color: #fff;
+  font-family: "CircularStd-Medium", sans-serif;
+  margin: 0;
 }
 
 /* Album cover */
 .album-cover {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* Titolo album */
 .album-title {
-    font-size: 1.8rem;
-    font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 /* Artista */
 .artist-img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 
 .artist-name {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* Bottoni */
 .btn-circle {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .play-btn {
-    background-color: #1db954;
-    border: none;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #000;
+  background-color: #1db954;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000;
 }
 
 /* Tracklist */
 .tracklist {
-    margin-top: 1rem;
-    /* altezza scroll mobile */
-    overflow-y: auto;
-    padding-right: 5px;
+  margin-top: 1rem;
+  /* altezza scroll mobile */
+  overflow-y: auto;
+  padding-right: 5px;
 }
 
 .tracklist::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .tracklist::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }
 
 .tracklist::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 .track {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .track:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
 }
 
 .track-title {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .track-artist {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .explicit {
-    display: inline-block;
-    background-color: #666;
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: bold;
-    padding: 0 3px;
-    margin-right: 4px;
-    border-radius: 2px;
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 0 3px;
+  margin-right: 4px;
+  border-radius: 2px;
 }
 
 /* Responsive Desktop */
 @media (min-width: 768px) {
-    .container {
-        display: flex;
-        gap: 2rem;
-    }
+  .container {
+    display: flex;
+    gap: 2rem;
+  }
 
-    .album-header {
-        flex: 0 0 300px;
-    }
+  .album-header {
+    flex: 0 0 300px;
+  }
 
-    .tracklist {
-        flex: 1;
-    }
+  .tracklist {
+    flex: 1;
+  }
 }
 
 #cover-arrow {
-    margin-top: 60px;
-    margin-left: 14px;
+  margin-top: 60px;
+  margin-left: 14px;
 }
 
 /*struttura della pagina lg*/
 aside.fixed-start {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
 /*left list*/
 #leftList {
-    height: calc(100vh - 250px);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #444 #000;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #000;
 }
-
 
 /*right desktop */
 section.fixed-end {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  main {
+    margin-left: 25%;
+    margin-right: 16.666%;
+  }
 }

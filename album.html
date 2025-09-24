@@ -14,8 +14,7 @@
 
 
 <body class="bg-black text-light">
-    <!-- void -->
-    <div class="d-none d-lg-block col-lg-3 bg-black fixed-start"></div>
+
 
     <!-- left desktop -->
     <aside class="d-none d-lg-block col-lg-3 bg-black fixed-start">
@@ -103,22 +102,15 @@
 
     <!-- Main (desktop center) -->
     <main class="col-lg-7">
-        <div class="container pt-5">
+
+
+        <!-- mobile -->
+        <div class="container d-lg-none pt-5">
             <span id="cover-arrow position-absolute"><i
                     class="bi bi-arrow-left position-absolute text-white"></i></span>
 
-            <!-- Copertina Album -->
-            <!-- <section>
-                <div class="card card-fullscreen d-flex position relative"></div>
-                <img style="width: 100px; height: auto;" src="./assets/imgs/main/image-20.jpg" alt="Cover Album"
-                    class="album-cover mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card’s content.</p>
-                </div>
-        </div>
-        </section> -->
+            
+       
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
@@ -330,6 +322,81 @@
             </div>
 
         </div>
+<!-- fine mobile -->
+        <!-- desktop -->
+<section class="d-none d-lg-block bg-black row gy-5 p-5">
+
+  <!-- card album -->
+  <div class="card col-12 d-flex flex-row align-items-center bg-black text-white" style="max-height: 200px;">
+    <img src="./assets/imgs/main/image-12.jpg" class="img-fluid" style="width: 200px; object-fit: cover;" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    </div>
+  </div>
+
+  <!-- Controlli principali -->
+  <div class="col-12 d-flex justify-content-start align-items-center mb-3">
+    <div class="d-flex align-items-center me-3">
+      <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+    </div>
+    <div class="d-flex gap-2">
+      <span class="me-3"><i class="bi bi-heart fs-1"></i></span>
+      <span class="me-3"><i class="bi bi-arrow-down-circle fs-1"></i></span>
+      <span><i class="bi bi-three-dots-vertical fs-1"></i></span>
+    </div>
+  </div>
+
+  <!-- Tracklist Desktop -->
+  <div class="col-12">
+    <!-- Header -->
+    <div class="row text-white align-items-center pb-2" style="border-bottom: 1px solid grey;">
+      <div class="col-1 text-center">#</div>
+      <div class="col-5">Titolo</div>
+      <div class="col-3">Riproduzioni</div>
+      <div class="col-2 text-center"><i class="bi bi-clock"></i></div>
+    </div>
+
+    <!-- Tracce -->
+    <div class="tracklist">
+      <div class="row text-white align-items-center py-2" style="border-bottom: 1px solid #222;">
+        <div class="col-1 text-center">1</div>
+        <div class="col-5 d-flex flex-column">
+          <span class="track-title fw-bold">Taste</span>
+          <span class="track-artist text-secondary">Sabrina Carpenter</span>
+        </div>
+        <div class="col-3">1.2M</div>
+        <div class="col-2 text-center">3:45</div>
+      </div>
+
+      <div class="row text-white align-items-center py-2" style="border-bottom: 1px solid #222;">
+        <div class="col-1 text-center">2</div>
+        <div class="col-5 d-flex flex-column">
+          <span class="track-title fw-bold">Please Please Please</span>
+          <span class="track-artist text-secondary">E Sabrina Carpenter</span>
+        </div>
+        <div class="col-3">980K</div>
+        <div class="col-2 text-center">3:30</div>
+      </div>
+
+      <div class="row text-white align-items-center py-2" style="border-bottom: 1px solid #222;">
+        <div class="col-1 text-center">3</div>
+        <div class="col-5 d-flex flex-column">
+          <span class="track-title fw-bold">Good Graces</span>
+          <span class="track-artist text-secondary">E Sabrina Carpenter</span>
+        </div>
+        <div class="col-3">870K</div>
+        <div class="col-2 text-center">4:02</div>
+      </div>
+
+    </div>
+    <!-- fine tracce -->
+  </div>
+<!-- fine tracklist -->
+</section>
+
+
+         
     </main>
 
     <section>
