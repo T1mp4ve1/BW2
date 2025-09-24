@@ -58,12 +58,14 @@ async function fetchProva2(query, container) {
     const convertRes = await res.json();
     const songs = convertRes.data;
     console.log("NUOVO!!!!!:", songs);
+    console.log(songs[5].artist.id);
     container.innerHTML = "";
     container.innerHTML = `<div class="card text-light p-2 bg-dark border-0 shadow-sm">
                                 <img src="${songs[5].album.cover_medium}" class="card-img-top mb-2" alt="img">
+                                <a href="artist.html?id=${songs[5].artist.id}" class="stretched-link"></a>
                                     <div class="card-body p-0">
-                                        <h6 class="card-title fw-bold">${songs[5].title}</h6>
-                                        <p class="card-text text-secondary">dfgdf</p>
+                                        <h6 class="card-title fw-bold">${songs[5].album.title}</h6>
+                                        <p class="card-text text-secondary">${songs[5].title}</p>
                                     </div>
                             </div>`;
   } catch (err) {
