@@ -303,86 +303,92 @@
 
 
 <!-- footer xl -->
-<footer class="player-bar bg-mygrey text-light fixed-bottom py-2 d-none d-lg-block">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+  <footer id="footer-play" class="player-bar bg-mygrey shadow text-light fixed-bottom py-2 d-none d-lg-block">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
 
-    <!-- sinistra: copertina e titolo -->
-    <div class="d-flex align-items-center gap-3">
-      <img src="./assets/imgs/main/image-1.jpg" alt="cover" width="50" class="rounded">
-      <div>
-        <p class="m-0 fw-semibold">Titolo canzone</p>
-        <p class="m-0 fs-6">Artista</p>
-      </div>
-      <!-- cuore -->
-      <label class="icon-toggle-heart ms-3">
-  <input type="checkbox" hidden>
-  <i class="bi bi-heart"></i>
-</label>
-    </div>
+                    <!-- sinistra: copertina e titolo -->
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="./assets/imgs/main/image-1.jpg" alt="cover" width="50" class="rounded">
+                        <div>
+                            <p class="m-0 fw-semibold">Titolo canzone</p>
+                            <p class="m-0 fs-6">Artista</p>
+                        </div>
+                        <!-- cuore -->
+                        <label class="icon-toggle-heart ms-3">
+                            <input type="checkbox" hidden>
+                            <i class="bi bi-heart"></i>
+                        </label>
+                    </div>
 
-    <!-- centro: controlli progress bar -->
-    <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
-      <!-- controlli -->
-      <div class="d-flex align-items-center gap-3 mb-1">
-        <!-- shuffle -->
-        <label class="icon-toggle">
-          <input type="checkbox" hidden>
-          <i class="bi bi-shuffle"></i>
-        </label>
-        <i class="bi bi-skip-start-fill fs-4"></i>
-        <i class="bi bi-play-circle-fill fs-2"></i>
-        <i class="bi bi-skip-end-fill fs-4"></i>
-        <!-- repeat -->
-        <label class="icon-toggle">
-          <input type="checkbox" hidden>
-          <i class="bi bi-repeat"></i>
-        </label>
-      </div>
-      <!-- barra progresso -->
-      <div class="d-flex align-items-center w-50 gap-2">
-        <p class="m-0 fs-6">0:42</p>
-        <div class="progress flex-grow-1" style="height: 4px;">
-          <div class="progress-bar bg-success" style="width: 25%;"></div>
-        </div>
-        <p class="m-0 fs-6">3:15</p>
-      </div>
-    </div>
+                    <!-- centro: controlli progress bar -->
+                    <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+                        <!-- controlli -->
+                        <div class="d-flex align-items-center gap-3 mb-1">
+                            <!-- shuffle -->
+                            <label class="icon-toggle">
+                                <input type="checkbox" hidden>
+                                <i class="bi bi-shuffle"></i>
+                            </label>
+                            <i class="bi bi-skip-start-fill fs-4"></i>
+                            <i class="bi bi-play-circle-fill fs-2"></i>
+                            <i class="bi bi-skip-end-fill fs-4"></i>
+                            <!-- repeat -->
+                            <label class="icon-toggle">
+                                <input type="checkbox" hidden>
+                                <i class="bi bi-repeat"></i>
+                            </label>
+                        </div>
+                        <!-- barra progresso -->
+                        <div class="d-flex align-items-center w-50 gap-2">
+                            <p class="m-0 fs-6">0:42</p>
+                            <div class="progress flex-grow-1" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: 25%;"></div>
+                            </div>
+                            <p class="m-0 fs-6">3:15</p>
+                        </div>
+                    </div>
 
-    <!-- destra: microfono, coda, dispositivi, volume, fullscreen -->
-    <div class="d-flex align-items-center gap-3">
-      <!-- mic -->
-      <label class="icon-toggle">
-        <input type="checkbox" hidden>
-        <i class="bi bi-mic"></i>
-      </label>
-      <!-- coda -->
-      <label class="icon-toggle">
-        <input type="checkbox" hidden>
-        <i class="bi bi-list"></i>
-      </label>
-      <!-- dispositivi bluetooth -->
-      <label class="icon-toggle">
-        <input type="checkbox" hidden>
-        <i class="bi bi-speaker"></i>
-      </label>
+                    <!-- destra: microfono, coda, dispositivi, volume, fullscreen -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- mic -->
+                        <label class="icon-toggle">
+                            <input type="checkbox" hidden>
+                            <i class="bi bi-mic"></i>
+                        </label>
+                        <!-- coda -->
+                        <label class="icon-toggle">
+                            <input type="checkbox" hidden>
+                            <i class="bi bi-list"></i>
+                        </label>
+                        <!-- dispositivi bluetooth -->
+                        <label class="icon-toggle">
+                            <input type="checkbox" hidden>
+                            <i class="bi bi-speaker"></i>
+                        </label>
 
-      <!-- volume -->
-      <div class="d-flex align-items-center gap-2">
-        <i class="bi bi-volume-up"></i>
-        <div class="progress" style="width: 80px; height: 4px;">
-          <div class="progress-bar bg-light" style="width: 60%;"></div>
-        </div>
-      </div>
+                        <!-- volume -->
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-volume-up"></i>
+                            <div class="progress" style="width: 80px; height: 4px;">
+                                <div class="progress-bar bg-light" style="width: 60%;"></div>
+                            </div>
+                        </div>
 
-      <!-- fullscreen -->
-      <label class="icon-toggle">
-        <input type="checkbox" hidden>
-        <i class="bi bi-arrows-fullscreen"></i>
-      </label>
-    </div>
-
-  </div>
-</footer>
+                        <!-- fullscreen -->
+                        <i class="bi bi-arrow-bar-down btn btn-sm btn-dark text-danger" id="closePlayPanel"></i>
+                    </div>
+                </div>
+            </footer>
+            <footer class="player-bar shadow text-light fixed-bottom py-2 d-none" id="minimazedPlayPannel">
+                <div class="container-fluid text-end">
+                    <i class="bi bi-arrow-bar-up btn btn-sm btn-dark text-success" id="minimazedPlayPannelBtn"></i>
+                </div>
+            </footer>
+            <footer class="player-bar shadow text-light fixed-bottom py-2 d-none" id="minimazedPlayPannel">
+                <div class="container-fluid text-end">
+                    <i class="bi bi-arrow-bar-up btn btn-sm btn-dark text-success" id="minimazedPlayPannelBtn"></i>
+                </div>
+            </footer>
 
 
     <script
@@ -390,5 +396,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+     <script src="assets/JavaScript/scripts.js"></script>
   </body>
 </html>
