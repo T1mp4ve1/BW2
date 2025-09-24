@@ -32,13 +32,6 @@ const minimazedPlayPannelBtn = document.getElementById(
   "minimazedPlayPannelBtn"
 );
 
-console.log(
-  playPanel,
-  playPanelBtn,
-  minimazedPlayPannel,
-  minimazedPlayPannelBtn
-);
-
 playPanelBtn.addEventListener("click", () => {
   playPanel.classList.remove("d-lg-block");
   minimazedPlayPannel.classList.remove("d-none");
