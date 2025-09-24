@@ -2,8 +2,8 @@ const KEY = "140b5bbc7bmsh51c8ed9dcbd4be0p1d88b3jsn4c501496c5a1";
 const HOST = "deezerdevs-deezer.p.rapidapi.com";
 const BASE = "https://deezerdevs-deezer.p.rapidapi.com";
 
-const params = new URLSearchParams(window.location.search); //prende tutto dopo '?'
-const id = params.get("id"); //controlla se c'e' id dopo '?'
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
 const headers = {
   method: "GET",
@@ -31,6 +31,7 @@ const minimazedPlayPannel = document.getElementById("minimazedPlayPannel");
 const minimazedPlayPannelBtn = document.getElementById(
   "minimazedPlayPannelBtn"
 );
+
 console.log(
   playPanel,
   playPanelBtn,
@@ -39,11 +40,17 @@ console.log(
 );
 
 playPanelBtn.addEventListener("click", () => {
-  playPanel.classList.add("d-none");
+  playPanel.classList.remove("d-lg-block");
   minimazedPlayPannel.classList.remove("d-none");
 });
 
 minimazedPlayPannelBtn.addEventListener("click", () => {
-  playPanel.classList.remove("d-none");
+  playPanel.classList.add("d-lg-block");
   minimazedPlayPannel.classList.add("d-none");
 });
+
+// CLOSE
+function MyClose() {
+  playPanel.classList.add("d-none");
+  minimazedPlayPannel.classList.remove("d-none");
+}
