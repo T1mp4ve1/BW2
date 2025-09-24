@@ -131,7 +131,7 @@ aside.fixed-start {
     overflow: hidden;
 }
 
-
+/*left list*/
 #leftList {
     height: calc(100vh - 250px);
     overflow-y: auto;
