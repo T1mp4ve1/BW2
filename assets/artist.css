@@ -19,7 +19,7 @@ body {
   object-fit: cover;
   border: none;
 }
-#imgCard {
+#imgCardLg {
   height: 450px;
   object-fit: cover;
 }
