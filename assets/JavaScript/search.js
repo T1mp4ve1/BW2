@@ -94,6 +94,8 @@ async function searchAndRender(query) {
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
+    const query = searchInput.value;
+    localStorage.setItem("lastSearch", query); // <-- salvo il valore
     const params = new URLSearchParams();
     params.set("q", searchInput.value);
     window.location.href = `search.html?${params.toString()}`;
@@ -103,6 +105,8 @@ searchInput.addEventListener("keydown", (e) => {
 searchInputMobile.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
+    const query = searchInputMobile.value;
+    localStorage.setItem("lastSearch", query); // <-- salvo il valore
     const params = new URLSearchParams();
     params.set("q", searchInputMobile.value);
     window.location.href = `search.html?${params.toString()}`;
