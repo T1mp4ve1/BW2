@@ -162,7 +162,7 @@ async function cardsAltro(query, container) {
     console.error("Errore cardsAltro:", err);
   }
 }
-cardsAltro("pop music", AltroRow);
+cardsAltro("TOOL", AltroRow);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------playlistLove
@@ -252,7 +252,7 @@ async function scrollBarLeft(query, container) {
     console.error("Errore scrollBarLeft:", err);
   }
 }
-scrollBarLeft("pop music", scrollable);
+scrollBarLeft("Progressive metal", scrollable);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------play bar Titolo canzone
