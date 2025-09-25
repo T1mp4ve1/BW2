@@ -4,10 +4,11 @@ const searchInputMobile = document.querySelector(".search-bar input[type='text']
 
 // API Deezer
 const url = "https://deezerdevs-deezer.p.rapidapi.com";
+const key = token; // definisci "token" da qualche parte
 const options = {
   method: "GET",
   headers: {
-    "x-rapidapi-key": "a21438c3b5msh049a71445767d80p13e0eajsn1fd0d870e5a2",
+    "x-rapidapi-key": key,
     "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
   },
 };
@@ -25,7 +26,27 @@ async function searchAndRender(query) {
 
     const songs = data.data;
 
-    // ciclo sulle 16 card predefinite
+    // --- ARTIST CARD (prende dal primo risultato) ---
+    const artist = songs[0].artist;
+    const artistCardContainer = document.getElementById("artist-card-container");
+    if (artist && artistCardContainer) {
+      artistCardContainer.innerHTML = `
+        <div class="card text-center bg-dark text-light p-3 h-100 artist-card" style="cursor:pointer;">
+          <img src="${artist.picture_medium}" class="card-img-top rounded-circle mx-auto mb-3" alt="${artist.name}">
+          <div class="card-body">
+            <h5 class="card-title">${artist.name}</h5>
+          </div>
+        </div>
+      `;
+
+      artistCardContainer.onclick = () => {
+        const params = new URLSearchParams();
+        params.set("id", artist.id);
+        window.location.href = `artist.html?${params.toString()}`;
+      };
+    }
+
+    // --- CICLO SULLE 16 CARD ALBUM ---
     for (let i = 1; i <= 16; i++) {
       const card = document.getElementById(`card${i}`);
       if (!card) continue;
@@ -37,14 +58,14 @@ async function searchAndRender(query) {
 
       if (song) {
         card.innerHTML = `
-      <div class="card position-relative text-light bg-warning overflow-hidden">
-        <div class="card-body">
-          <h5 class="card-title text-truncate mb-5 mia-classe-xl">${song.album.title}</h5>
-          <p class="card-text">${song.artist.name}</p>
-        </div>
-        <img class="card-image" src="${song.album.cover_medium}" alt="copertina playlist">
-      </div>
-    `;
+          <div class="card position-relative text-light bg-warning overflow-hidden">
+            <div class="card-body">
+              <h5 class="card-title text-truncate mb-5 mia-classe-xl">${song.album.title}</h5>
+              <p class="card-text">${song.artist.name}</p>
+            </div>
+            <img class="card-image" src="${song.album.cover_medium}" alt="copertina playlist">
+          </div>
+        `;
 
         card.onclick = () => {
           const params = new URLSearchParams();
