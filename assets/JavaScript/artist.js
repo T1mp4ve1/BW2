@@ -3,6 +3,7 @@ const url = "https://deezerdevs-deezer.p.rapidapi.com";
 const key = token;
 const host = "deezerdevs-deezer.p.rapidapi.com";
 
+const lastSearch = localStorage.getItem("lastSearch");
 const params = new URLSearchParams(window.location.search);
 const artistId = params.get("id");
 
@@ -90,7 +91,7 @@ async function popular(query) {
   }
 }
 
-popular("fedez");
+popular(lastSearch);
 
 // // lg
 // async function popularLg(query) {
