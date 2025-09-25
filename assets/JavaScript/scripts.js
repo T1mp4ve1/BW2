@@ -16,19 +16,19 @@ const headers = {
 //--------------------------------------------------------------------
 
 //--------------------------------------------------------------------tracklist
-// async function tracklist(artistId, limite) {
-//   try {
-//     const res = await fetch(
-//       `${BASE}/artist/${artistId}/top?limit=${limite}`,
-//       headers
-//     );
-//     const convertRes = await res.json();
-//     console.log("tracklist", convertRes);
-//   } catch (err) {
-//     console.log("Errore tracklist:", err);
-//   }
-// }
-// tracklist(13, 50);
+async function tracklist(artistId, limite) {
+  try {
+    const res = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=${limite}`,
+      headers
+    );
+    const convertRes = await res.json();
+    console.log("tracklist", convertRes);
+  } catch (err) {
+    console.log("Errore tracklist:", err);
+  }
+}
+tracklist(13, 10);
 //--------------------------------------------------------------------
 
 //--------------------------------------------------------------------funzione esempio
@@ -162,7 +162,7 @@ async function cardsAltro(query, container) {
     console.error("Errore cardsAltro:", err);
   }
 }
-cardsAltro("jazz music", AltroRow);
+cardsAltro("pop music", AltroRow);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------playlistLove
