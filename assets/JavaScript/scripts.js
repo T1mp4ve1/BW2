@@ -50,26 +50,29 @@ minimazedPlayPannelBtn.addEventListener("click", () => {
 });
 //----------------------------------------------------------------------
 
-//----------------------------------------------------------------------add card artist
-const card1 = document.getElementById("card1");
+//----------------------------------------------------------------------add card Altro di cio'
 async function fetchProva2(query, container) {
+  const AltroRow = document.getElementById("AltroRow");
   try {
-    const res = await fetch(`${BASE}/search?q=${query}`, headers);
-    const convertRes = await res.json();
-    const songs = convertRes.data;
-    console.log("NUOVO!!!!!:", songs);
-    console.log(songs[5].artist.id);
     container.innerHTML = "";
-    container.innerHTML = `<div class="card text-light p-2 bg-dark border-0 shadow-sm">
-                                <img src="${songs[5].album.cover_medium}" class="card-img-top mb-2" alt="img">
-                                <a href="artist.html?id=${songs[5].artist.id}" class="stretched-link"></a>
+    for (let i = 0; i < 10; i++) {
+      const res = await fetch(`${BASE}/search?q=${query}`, headers);
+      const convertRes = await res.json();
+      const songs = convertRes.data;
+      console.log("NUOVO!!!!!:", songs);
+      container.innerHTML += `<div class="col mb-4">
+                                <div class="card text-light p-2 bg-dark border-0 shadow-sm">
+                                  <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
+                                  <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
                                     <div class="card-body p-0">
-                                        <h6 class="card-title fw-bold">${songs[5].album.title}</h6>
-                                        <p class="card-text text-secondary">${songs[5].title}</p>
+                                      <h6 class="card-title fw-bold">${songs[i].album.title}</h6>
+                                      <p class="card-text text-secondary">${songs[i].title}</p>
                                     </div>
-                            </div>`;
+                                </div>
+                              </div>`;
+    }
   } catch (err) {
     console.error("Errore fetchProva:", err);
   }
 }
-fetchProva2("SystemOfADown", card1);
+fetchProva2("SystemOfADown", AltroRow);
