@@ -25,7 +25,7 @@ body {
 
 /* main */
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .myTitle {
     font-size: 1.7rem;
   }
@@ -61,7 +61,6 @@ main {
   font-size: 0.7rem;
 }
 
-
 #navTop {
   background-color: rgba(27, 28, 30, 0.951);
 }
@@ -85,7 +84,7 @@ button {
 
 #bottom-menu {
   margin-bottom: 50px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)30%, rgba(0, 0, 0, 0.775) 60%, rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.775) 60%, rgba(0, 0, 0, 0));
 }
 
 #bootom-top {
@@ -117,7 +116,6 @@ aside.fixed-start {
   scrollbar-color: #444 #000;
 }
 
-
 /* right desktop */
 section.fixed-end {
   position: fixed;
@@ -132,8 +130,6 @@ section.fixed-end {
   font-size: 0.8rem;
 }
 
-
-
 #footer-play {
-  background-color: #202225;
+  background-color: #121212;
 }
