@@ -50,8 +50,22 @@ minimazedPlayPannelBtn.addEventListener("click", () => {
 });
 //----------------------------------------------------------------------
 
+//----------------------------------------------------------------------buonasera musica podcast
+async function cardsBuonasera(query, container) {
+  const marginRow = document.getElementById("marginRow");
+  try {
+    container.innerHTML = "";
+    for (let i = 0; i < 6; i++) {
+      const res = await fetch(`${BASE}/search?q=${query}`, headers);
+    }
+  } catch (err) {
+    console.log("Errore cardsBuonasera:", err);
+  }
+}
+//----------------------------------------------------------------------
+
 //----------------------------------------------------------------------add card Altro di cio'
-async function fetchProva2(query, container) {
+async function cardsAltro(query, container) {
   const AltroRow = document.getElementById("AltroRow");
   try {
     container.innerHTML = "";
@@ -65,14 +79,14 @@ async function fetchProva2(query, container) {
                                   <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
                                   <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
                                     <div class="card-body p-0">
-                                      <h6 class="card-title fw-bold">${songs[i].album.title}</h6>
-                                      <p class="card-text text-secondary">${songs[i].title}</p>
+                                      <h6 class="card-title fw-bold text-truncate">${songs[i].album.title}</h6>
+                                      <p class="card-text text-secondary text-truncate">${songs[i].title}</p>
                                     </div>
                                 </div>
                               </div>`;
     }
   } catch (err) {
-    console.error("Errore fetchProva:", err);
+    console.error("Errore cardsAltro:", err);
   }
 }
-fetchProva2("SystemOfADown", AltroRow);
+cardsAltro("rock", AltroRow);

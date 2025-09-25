@@ -1,6 +1,12 @@
 const url = "https://deezerdevs-deezer.p.rapidapi.com";
-const key = "20561f7cfb1f3663e64640399d4f0b842af705dc851769ecf4dee26d6dc0b27f";
+const key = token;
 const host = "deezerdevs-deezer.p.rapidapi.com";
+
+const params = new URLSearchParams(window.location.search);
+const albumId = params.get("id");
+console.log(albumId)
+
+const card1 = document.getElementById("card");
 
 const options = {
     method: "GET",
@@ -10,21 +16,20 @@ const options = {
     },
 };
 
-async function album(query) {
+async function album() {
+    const imgCard = document.getElementById("imgCard");
+
     try {
-        const res = await fetch(`${url}/search?q=${query}`, options);
-        const data = await res.json();
+        // ciclo for
+        const result = await fetch(`${url}/album/${albumId}`, options);
+        const data = await result.json();
         console.log(data);
-
-        const array = data.data;
-        console.log(array);
-
-        if (array.length > 0) {
-            document.getElementById("imgCard").src = array[0].album.cover_medium;
-        }
+        document.getElementById("imgCard").src = data.cover_medium;
+        document.getElementById("imgCardLg").src = data.cover_medium;
+        /*document.getElementById("pCard").innerText = data.name; */
     } catch (err) {
         console.error(err);
     }
 }
 
-album("shortnsweet");
+album();
