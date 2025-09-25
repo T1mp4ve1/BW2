@@ -50,26 +50,43 @@ minimazedPlayPannelBtn.addEventListener("click", () => {
 });
 //----------------------------------------------------------------------
 
-//----------------------------------------------------------------------add card artist
-const card1 = document.getElementById("card1");
-async function fetchProva2(query, container) {
+//----------------------------------------------------------------------buonasera musica podcast
+async function cardsBuonasera(query, container) {
+  const marginRow = document.getElementById("marginRow");
   try {
-    const res = await fetch(`${BASE}/search?q=${query}`, headers);
-    const convertRes = await res.json();
-    const songs = convertRes.data;
-    console.log("NUOVO!!!!!:", songs);
-    console.log(songs[5].artist.id);
     container.innerHTML = "";
-    container.innerHTML = `<div class="card text-light p-2 bg-dark border-0 shadow-sm">
-                                <img src="${songs[5].album.cover_medium}" class="card-img-top mb-2" alt="img">
-                                <a href="artist.html?id=${songs[5].artist.id}" class="stretched-link"></a>
-                                    <div class="card-body p-0">
-                                        <h6 class="card-title fw-bold">${songs[5].album.title}</h6>
-                                        <p class="card-text text-secondary">${songs[5].title}</p>
-                                    </div>
-                            </div>`;
+    for (let i = 0; i < 6; i++) {
+      const res = await fetch(`${BASE}/search?q=${query}`, headers);
+    }
   } catch (err) {
-    console.error("Errore fetchProva:", err);
+    console.log("Errore cardsBuonasera:", err);
   }
 }
-fetchProva2("SystemOfADown", card1);
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------add card Altro di cio'
+async function cardsAltro(query, container) {
+  const AltroRow = document.getElementById("AltroRow");
+  try {
+    container.innerHTML = "";
+    for (let i = 0; i < 10; i++) {
+      const res = await fetch(`${BASE}/search?q=${query}`, headers);
+      const convertRes = await res.json();
+      const songs = convertRes.data;
+      console.log("NUOVO!!!!!:", songs);
+      container.innerHTML += `<div class="col mb-4">
+                                <div class="card text-light p-2 bg-dark border-0 shadow-sm">
+                                  <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
+                                  <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
+                                    <div class="card-body p-0">
+                                      <h6 class="card-title fw-bold text-truncate">${songs[i].album.title}</h6>
+                                      <p class="card-text text-secondary text-truncate">${songs[i].title}</p>
+                                    </div>
+                                </div>
+                              </div>`;
+    }
+  } catch (err) {
+    console.error("Errore cardsAltro:", err);
+  }
+}
+cardsAltro("rock", AltroRow);

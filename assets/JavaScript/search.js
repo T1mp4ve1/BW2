@@ -4,7 +4,7 @@ const searchInputMobile = document.querySelector(".search-bar input[type='text']
 
 // API Deezer
 const url = "https://deezerdevs-deezer.p.rapidapi.com";
-const key = token; // definisci "token" da qualche parte
+const key = token;
 const options = {
   method: "GET",
   headers: {
@@ -30,14 +30,20 @@ async function searchAndRender(query) {
     const artist = songs[0].artist;
     const artistCardContainer = document.getElementById("artist-card-container");
     if (artist && artistCardContainer) {
+      artistCardContainer.innerHTML = "";
+
       artistCardContainer.innerHTML = `
-        <div class="card text-center bg-dark text-light p-3 h-100 artist-card" style="cursor:pointer;">
-          <img src="${artist.picture_medium}" class="card-img-top rounded-circle mx-auto mb-3" alt="${artist.name}">
-          <div class="card-body">
-            <h5 class="card-title">${artist.name}</h5>
-          </div>
-        </div>
-      `;
+  <div class="d-flex align-items-center bg-black text-light p-2 rounded artist-card" style="cursor:pointer;">
+    <img src="${artist.picture_medium}" 
+         class="rounded-circle me-3" 
+         alt="${artist.name}" 
+         style="width:150px; height:150px; object-fit:cover;">
+    <div>
+      <h6 class="mb-0">${artist.name}</h6>
+      <small class="text-secondary">Artista</small>
+    </div>
+  </div>
+`;
 
       artistCardContainer.onclick = () => {
         const params = new URLSearchParams();
@@ -53,19 +59,21 @@ async function searchAndRender(query) {
 
       card.innerHTML = ""; // svuota il contenuto predefinito
 
-      // prendi il risultato corrispondente, se esiste
       const song = songs[i - 1];
 
       if (song) {
+        // genera un numero random da 1 a 9
+        const randomBg = Math.floor(Math.random() * 9) + 1;
+
         card.innerHTML = `
-          <div class="card position-relative text-light bg-warning overflow-hidden">
-            <div class="card-body">
-              <h5 class="card-title text-truncate mb-5 mia-classe-xl">${song.album.title}</h5>
-              <p class="card-text">${song.artist.name}</p>
-            </div>
-            <img class="card-image" src="${song.album.cover_medium}" alt="copertina playlist">
-          </div>
-        `;
+      <div class="card position-relative text-light bg-color-${randomBg} overflow-hidden">
+        <div class="card-body">
+          <h5 class="card-title text-truncate mb-5 mia-classe-xl">${song.album.title}</h5>
+          <p class="card-text">${song.artist.name}</p>
+        </div>
+        <img class="card-image" src="${song.album.cover_medium}" alt="copertina playlist">
+      </div>
+    `;
 
         card.onclick = () => {
           const params = new URLSearchParams();
@@ -73,7 +81,6 @@ async function searchAndRender(query) {
           window.location.href = `album.html?${params.toString()}`;
         };
       } else {
-        // se non c’è più nessun risultato, lascia la card vuota
         card.innerHTML = "";
         card.onclick = null;
       }
@@ -87,6 +94,8 @@ async function searchAndRender(query) {
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
+    const query = searchInput.value;
+    localStorage.setItem("lastSearch", query); // <-- salvo il valore
     const params = new URLSearchParams();
     params.set("q", searchInput.value);
     window.location.href = `search.html?${params.toString()}`;
@@ -96,6 +105,8 @@ searchInput.addEventListener("keydown", (e) => {
 searchInputMobile.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
+    const query = searchInputMobile.value;
+    localStorage.setItem("lastSearch", query); // <-- salvo il valore
     const params = new URLSearchParams();
     params.set("q", searchInputMobile.value);
     window.location.href = `search.html?${params.toString()}`;
