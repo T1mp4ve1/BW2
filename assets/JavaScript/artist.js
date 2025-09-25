@@ -131,3 +131,4 @@ function MyClose() {
   playPanel.classList.add("d-none");
   minimazedPlayPannel.classList.remove("d-none");
 }
+
