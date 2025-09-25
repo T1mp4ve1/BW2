@@ -27,7 +27,7 @@ async function artist() {
     console.log(data);
     console.log(data.name);
     document.getElementById("imgCard").src = data.picture_medium;
-    document.getElementById("imgCardLg").src = data.picture_medium;
+    document.getElementById("imgCardLg").src = data.picture_big;
     document.getElementById("pCard").innerText = data.name;
     document.getElementById("visual").innerText = data.nb_fan + " " + "ascoltatori mensili";
     document.getElementById("visual1").innerText = data.nb_fan + " " + "ascoltatori mensili";
@@ -131,4 +131,3 @@ function MyClose() {
   playPanel.classList.add("d-none");
   minimazedPlayPannel.classList.remove("d-none");
 }
-
