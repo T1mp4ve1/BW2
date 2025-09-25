@@ -17,6 +17,14 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 html,
 body {
   height: 100%;
@@ -88,7 +96,7 @@ button {
 }
 
 #bootom-top {
-  margin-bottom: 120px;
+  margin-bottom: 140px;
 }
 
 #playPanel {
@@ -170,4 +178,9 @@ section.fixed-end {
   #buonaseraTop {
     margin-top: 100px;
   }
+}
+
+/* playlistLove */
+#playlistLove {
+  margin-bottom: 240px;
 }

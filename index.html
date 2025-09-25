@@ -48,12 +48,16 @@
 
                     <i class="bi bi-three-dots fs-3"></i>
                     <div class="d-flex align-items-center">
-                        <i class="bi bi-house-door-fill fs-2"></i>
-                        <p class="m-0 ms-4">Home</p>
+                        <a href="index.html" class="link-light d-flex align-items-center">
+                            <i class="bi bi-house-door-fill fs-2"></i>
+                            <p class="m-0 ms-4">Home</p>
+                        </a>
                     </div>
                     <div class="d-flex align-items-center">
-                        <i class="bi bi-search fs-2"></i>
-                        <p class="m-0 ms-4">Cerca</p>
+                        <a href="search.html" class="link-light d-flex align-items-center">
+                            <i class="bi bi-search fs-2"></i>
+                            <p class="m-0 ms-4">Cerca</p>
+                        </a>
                     </div>
                     <div class="d-flex align-items-center mb-4">
                         <i class="bi bi-collection-play fs-2"></i>
@@ -75,52 +79,7 @@
 
                     <div id="leftList">
                         <ul class="list-group bg-black" id="scrollable">
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">An item</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">A second item
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">A third item</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">A fourth item
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">And a fifth one
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">Lorem ipsum dolor
-                                sit amet
-                                consectetur adipisicing elit.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">sit amet
-                                consectetur adipisicing elit.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">
-                                consectetur</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate"> optio,
-                                voluptates soluta quasi
-                                nostrum mollitia. Omnis deserunt saepe inventore.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">Sequi
-                                repudiandae, tenetur</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">Eligendi, sit!
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">laboriosames
-                                solutadeserunt
-                                saepe inventore.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate"> voluptates
-                                eligendi dolorem
-                                et, iusto ea alias beatae eos dolore </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">Omnis deserunt
-                                saepe inventore.
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate"> optio,
-                                voluptates soluta</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">voluptates soluta
-                                quasi nostrum
-                                mollitia. Omnis deserunt saepe inventore.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">soluta quasi
-                                saepe inventore.
-                            </li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">nostrum</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">optioquasi
-                                inventore.</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">mollitia</li>
-                            <li class="list-group-item bg-black border-0 text-secondary text-truncate">Omnis deserunt
-                                saepe inventore.
-                            </li>
+                            <!-- <li class="list-group-item bg-black border-0 text-secondary text-truncate">An item</li> -->
                         </ul>
                     </div>
                 </div>
@@ -311,7 +270,7 @@
                 </section>
 
                 <!-- Altro di cio' -->
-                <section class="d-none d-lg-block" id="altroSection">
+                <section class="d-none d-lg-block mb-5" id="altroSection">
                     <div class="container">
                         <h2 class="m-0 display-5 fw-semibold myTitle2">Altro di cio'che ti piace</h2>
                         <div id="AltroRow" class="row row-cols-5">
@@ -320,69 +279,68 @@
                 </section>
 
                 <!-- playlist love -->
-                <section class="d-lg-none">
-                    <div>
-                        <div class="container-fluid my-3">
-                            <div class="card bg-dark  border-0 p-4">
-                                <div class="row">
-                                    <div id="shadow-white" class="col-6 d-grid p-0"
-                                        style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
-                                        <img src="./assets/imgs/main/image-11.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt="..." />
+                <section id="playlistLove" class="d-lg-none">
+                    <!-- 
+                    <div class="container-fluid my-3">
+                        <div class="card bg-dark  border-0 p-4">
+                            <div class="row">
+                                <div id="shadow-white" class="col-6 d-grid p-0"
+                                    style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt="..." />
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-secondary">Playlist</p>
+                                    <h3 class="text-light fw-bold">study and work</h3>
+                                </div>
+                                <div
+                                    class="col-12 mt-4 text-light d-flex justify-content-between align-items-center p-0">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-heart-fill text-success display-5"></i>
+                                        <i class="bi bi-three-dots-vertical display-5"></i>
                                     </div>
-                                    <div class="col-6">
-                                        <p class="text-secondary">Playlist</p>
-                                        <h3 class="text-light fw-bold">study and work</h3>
-                                    </div>
-                                    <div
-                                        class="col-12 mt-4 text-light d-flex justify-content-between align-items-center p-0">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <i class="bi bi-heart-fill text-success display-5"></i>
-                                            <i class="bi bi-three-dots-vertical display-5"></i>
-                                        </div>
 
-                                        <div class="d-flex align-items-center gap-3">
-                                            <p class="text-secondary m-0">16 brani</p>
-                                            <i class="bi bi-play-circle display-5 ali"></i>
-                                        </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="text-secondary m-0">16 brani</p>
+                                        <i class="bi bi-play-circle display-5 ali"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <div class="container-fluid my-3">
-                            <div class="card bg-dark border-0 p-4">
-                                <div class="row">
-                                    <div id="shadow-white" class="col-6 d-grid p-0"
-                                        style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
-                                        <img src="./assets/imgs/main/image-11.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt="" />
-                                        <img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt="..." />
+                    <div class="container-fluid my-3">
+                        <div class="card bg-dark  border-0 p-4">
+                            <div class="row">
+                                <div id="shadow-white" class="col-6 d-grid p-0"
+                                    style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-14.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-16.jpg" class="img-fluid" alt="" />
+                                    <img src="./assets/imgs/main/image-12.jpg" class="img-fluid" alt="..." />
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-secondary">Playlist</p>
+                                    <h3 class="text-light fw-bold">study and work</h3>
+                                </div>
+                                <div
+                                    class="col-12 mt-4 text-light d-flex justify-content-between align-items-center p-0">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-heart-fill text-success display-5"></i>
+                                        <i class="bi bi-three-dots-vertical display-5"></i>
                                     </div>
-                                    <div class="col-6">
-                                        <p class="text-secondary">Playlist</p>
-                                        <h3 class="text-light fw-bold">study and work</h3>
-                                    </div>
-                                    <div
-                                        class="col-12 mt-4 text-light d-flex justify-content-between align-items-center p-0">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <i class="bi bi-heart-fill text-success display-5"></i>
-                                            <i class="bi bi-three-dots-vertical display-5"></i>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <p class="text-secondary m-0">16 brani</p>
-                                            <i class="bi bi-play-circle display-5 ali"></i>
-                                        </div>
+
+                                    <div class="d-flex align-items-center gap-3">
+                                        <p class="text-secondary m-0">16 brani</p>
+                                        <i class="bi bi-play-circle display-5 ali"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
                 </section>
             </main>
 
@@ -396,7 +354,7 @@
                             <!-- left -->
                             <div class="d-flex justify-content-start align-items-center gap-2">
                                 <i class="bi bi-vinyl display-5"></i>
-                                <h2 class="m-0">Song Title</h2>
+                                <h2 id="playSongTitle" class="m-0">Song Title</h2>
                             </div>
                             <!-- right -->
                             <div class="d-flex justify-content-end align-items-center gap-4">
@@ -448,8 +406,8 @@
 
                     <!-- sinistra: copertina e titolo -->
                     <div class="d-flex align-items-center gap-3">
-                        <img src="./assets/imgs/main/image-1.jpg" alt="cover" width="50" class="rounded">
-                        <div>
+                        <img id="playImg" alt="cover" width="50" class="rounded">
+                        <div id="playTitleArtist">
                             <p class="m-0 fw-semibold">Titolo canzone</p>
                             <p class="m-0 fs-6">Artista</p>
                         </div>
