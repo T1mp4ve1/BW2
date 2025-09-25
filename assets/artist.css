@@ -120,3 +120,7 @@ p {
 #playPanel {
   background-color: rgba(55, 58, 63, 0.951);
 }
+
+.bg-mygrey {
+  background-color: #121212;
+}
