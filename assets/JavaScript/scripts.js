@@ -155,8 +155,8 @@ async function cardsBuonasera(query, container) {
       const img3 = i + 2;
       const img4 = i + 3;
       container.innerHTML += `
-                        <div class="col-12 col-sm-6 col-xl-4 position-relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle-fill posPlay" viewBox="0 0 16 16">
+                        <div class="col-12 col-sm-6 col-xl-4 position-relative cardPlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle-fill posPlay rounded-5" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
 </svg>
                             <div class="card text-light shadow border-0 overflow-hidden cardBuonasera">

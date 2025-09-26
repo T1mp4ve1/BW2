@@ -287,17 +287,19 @@ section.fixed-end {
   opacity: 0;
   color: #1db954;
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   right: 5%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.396);
   z-index: 1000;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.cardPlay:hover .posPlay {
+  transform: translateY(-5px);
+  opacity: 0.9;
 }
 
 .posPlay:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-.cardBuonasera:hover .posPlay {
-  opacity: 0.9;
+transform: scale(2);
 }
