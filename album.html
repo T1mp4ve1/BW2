@@ -86,7 +86,8 @@
 
     <!-- mobile -->
     <div class="container d-lg-none pt-5 gradient">
-      <span class="cover-arrow position-absolute"><i class="bi bi-arrow-left position-absolute text-white"></i></span>
+      <span id="arrowBack2" class="cover-arrow position-absolute z-3"><i
+          class="bi bi-arrow-left position-absolute text-white"></i></span>
 
       <div class="text-center p-5 pt-0 d-flex d-lg-none position-relative">
         <img id="imgCard" alt="Cover Album" class="album-cover mb-3" />
@@ -287,19 +288,13 @@
         <!-- arrow lg -->
         <div class="d-flex gap-5">
           <a class="bg-black" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+            <svg id="arrowBack" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
               class="bi bi-caret-left position-absolute text-secondary" viewBox="0 0 16 16">
               <path
                 d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
             </svg>
           </a>
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-              class="bi bi-caret-right position-absolute text-secondary" viewBox="0 0 16 16">
-              <path
-                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-            </svg>
-          </a>
+
         </div>
         <!-- dropdown lg -->
         <div id="dropdownCard" class="d-flex align-items-center mt-3 p-1 bg-dark rounded-5">

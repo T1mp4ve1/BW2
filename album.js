@@ -132,3 +132,12 @@ function MyClose() {
   minimazedPlayPannel.classList.remove("d-none");
 }
 
+const arrowBack = document.getElementById("arrowBack");
+arrowBack.addEventListener("click", () => {
+  history.back();
+});
+
+const arrowBack2 = document.getElementById("arrowBack2");
+arrowBack2.addEventListener("click", () => {
+  history.back();
+});
