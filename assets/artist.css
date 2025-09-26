@@ -128,3 +128,12 @@ p {
 #paddingS {
   padding-bottom: 200px;
 }
+.zoomBtn {
+  transition: transform 0.2s ease-in-out;
+}
+.zoomBtn:hover {
+  transform: scale(1.1);
+}
+.bg-mygrey {
+  background-color: #121212;
+}

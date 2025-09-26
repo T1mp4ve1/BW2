@@ -16,7 +16,7 @@ const options = {
     "x-rapidapi-host": host,
   },
 };
-
+// header artista
 async function artist() {
   const imgCard = document.getElementById("imgCard");
 
@@ -29,10 +29,8 @@ async function artist() {
     document.getElementById("imgCard").src = data.picture_medium;
     document.getElementById("imgCardLg").src = data.picture_big;
     document.getElementById("pCard").innerText = data.name;
-    document.getElementById("visual").innerText =
-      data.nb_fan + " " + "ascoltatori mensili";
-    document.getElementById("visual1").innerText =
-      data.nb_fan + " " + "ascoltatori mensili";
+    document.getElementById("visual").innerText = data.nb_fan + " " + "ascoltatori mensili";
+    document.getElementById("visual1").innerText = data.nb_fan + " " + "ascoltatori mensili";
   } catch (err) {
     console.error(err);
   }
@@ -41,10 +39,7 @@ artist();
 
 async function popular(id, limite) {
   try {
-    const result = await fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=${limite}`,
-      options
-    );
+    const result = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=${limite}`, options);
     const data = await result.json();
     console.log("tracks", data.data);
     if (data.data.length < 1) {
@@ -53,6 +48,7 @@ async function popular(id, limite) {
                     </p>`;
       return;
     }
+    // card mobile
     for (let i = 1; i <= limite; i++) {
       const cardPopular = document.getElementById(`cardPopular${i}`);
       if (!cardPopular) continue;
@@ -61,17 +57,11 @@ async function popular(id, limite) {
                   <p>${i}</p>
                 </div>
                 <div class="col-3">
-                  <img class="w-100" src="${
-                    data.data[i - 1].album.cover_xl
-                  }" alt="" />
+                  <img class="w-100" src="${data.data[i - 1].album.cover_xl}" alt="" />
                 </div>
                 <div class="col-7 d-flex flex-column justify-content-center p-0">
-                  <p class="m-0 fs-4 fw-semibold text-truncate">${
-                    data.data[i - 1].title
-                  }</p>
-                  <p class="m-0 fs-5 text-secondary">${
-                    data.data[i - 1].rank
-                  }</p>
+                  <p class="m-0 fs-4 fw-semibold text-truncate">${data.data[i - 1].title}</p>
+                  <p class="m-0 fs-5 text-secondary">${data.data[i - 1].rank}</p>
                 </div>
                 <div class="col-1 d-flex justify-content-center align-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -79,28 +69,39 @@ async function popular(id, limite) {
                   </svg>
                 </div>`;
     }
+    // card lg
     for (let l = 1; l <= limite; l++) {
       const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
-      cardPopularLg.innerHTML = `<div class="col-1 d-flex justify-content-center align-items-center">
+      cardPopularLg.innerHTML = `<div id="number" class=" col-1 d-flex justify-content-center align-items-center">
                         <p>${l}</p>
                       </div>
                       <div class="col-2 d-flex">
-                        <img class="w-100" src="${
-                          data.data[l - 1].album.cover_small
-                        }" alt="" />
-                      </div>
-                      <div class="col-9 d-flex justify-content-between align-items-center p-0">
-                        <p class="m-0 fs-3 fw-semibold text-truncate">${
-                          data.data[l - 1].title
-                        }</p>
-                        <p class="m-0 fs-5 text-secondary">${
-                          data.data[l - 1].rank
-                        }</p>
-                        <p class="m-0 fs-5 text-secondary">${
-                          data.data[l - 1].duration
-                        }</p>
-                      </div> `;
-      // console.log(song.album.cover_small);
+                        <img  class="w-100" src="${data.data[l - 1].album.cover_small}" alt="" />
+                          </div>
+                    
+                    <div class="col-5 d-flex justify-content-start align-items-center">
+                       
+                    <p class="m-0 fs-5  fw-semibold text-truncate">${data.data[l - 1].title}</p>
+                    </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                    <p class="m-0 fs-5 text-secondary">${data.data[l - 1].rank}</p>
+                    </div>
+
+                     <div class="col-1 d-flex justify-content-center align-items-center">  
+                    <p class="m-0 fs-5 text-secondary">${data.data[l - 1].duration}</p>
+                    </div> `;
+
+      // over card
+      cardPopularLg.addEventListener("mouseenter", () => {
+        cardPopularLg.style.backgroundColor = "#2a2a2a";
+        const number = document.getElementById("number");
+        number.innerHTML = `<i class="bi bi-play-fill"></i>`;
+      });
+      cardPopularLg.addEventListener("mouseleave", () => {
+        cardPopularLg.style.backgroundColor = "#121212";
+        const number = document.getElementById("number");
+        number.innerHTML = ` `;
+      });
     }
   } catch (err) {
     console.error(err);
@@ -130,9 +131,7 @@ popular(artistId, 5);
 const playPanel = document.getElementById("footer-play");
 const playPanelBtn = document.getElementById("closePlayPanel");
 const minimazedPlayPannel = document.getElementById("minimazedPlayPannel");
-const minimazedPlayPannelBtn = document.getElementById(
-  "minimazedPlayPannelBtn"
-);
+const minimazedPlayPannelBtn = document.getElementById("minimazedPlayPannelBtn");
 
 playPanelBtn.addEventListener("click", () => {
   playPanel.classList.remove("d-lg-block");
