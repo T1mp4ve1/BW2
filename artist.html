@@ -156,7 +156,7 @@
           <!-- card-artist -->
           <section id="artist">
             <div id="card" class="card card-fullscreen d-flex position relative">
-              <a class="d-lg-none" href="#">
+              <button class="d-lg-none" id="arrowBack2">
                 <svg
                   id="svgCard"
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,11 +170,11 @@
                     d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
                   />
                 </svg>
-              </a>
+              </button>
               <div class="d-none d-lg-flex">
                 <!-- arrow lg -->
                 <div class="d-flex gap-5">
-                  <a class="bg-black" href="#">
+                  <button class="bg-black" id="arrowBack">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="50"
@@ -185,21 +185,7 @@
                     >
                       <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
                     </svg>
-                  </a>
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="50"
-                      fill="currentColor"
-                      class="bi bi-caret-right position-absolute text-secondary mt-3 ms-4"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"
-                      />
-                    </svg>
-                  </a>
+                  </button>
                 </div>
                 <!-- dropdown lg -->
                 <div id="dropdownCard" class="d-flex position-absolute align-items-center mt-3">
@@ -513,7 +499,7 @@
                   </div>
                   <!-- right text -->
                   <div class="col-8 d-flex flex-column justify-content-center p-0">
-                    <p class="m-0 text-secondary">8 brani di artista</p>
+                    <p class="m-0 text-secondary">5 brani di artista</p>
                   </div>
                 </div>
               </div>
@@ -521,8 +507,9 @@
           </section>
 
           <!-- carosello -->
-          <section id="paddingS" class="container-fluid d-lg-none">
-            <div id="carouselExample" class="carousel slide">
+          <section id="paddingS" class="container-fluid d-flex">
+            <div id="carouselExample" class="carousel slide m-auto">
+              <h1 class="text-center my-4 fw-bold">ALBUM</h1>
               <div class="carousel-inner" id="carouselInner">
                 <div class="carousel-item active">
                   <!-- <img src="assets/imgs/main/image-11.jpg" class="d-block w-100" alt="..." /> -->
