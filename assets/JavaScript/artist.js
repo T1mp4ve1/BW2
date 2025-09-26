@@ -111,6 +111,31 @@ async function popular(id, limite) {
 }
 
 popular(artistId, 5);
+// carosello
+async function carusel(id, limite) {
+  try {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=${limite}`, options);
+    const data = await response.json();
+    const songs = data.data;
+
+    const carouselInner = document.getElementById("carouselInner");
+    carouselInner.innerHTML = "";
+
+    for (let i = 0; i < songs.length; i++) {
+      const cover = songs[i].album.cover_medium;
+      const item = document.createElement("div");
+      item.classList.add("carousel-item");
+      if (i === 0) item.classList.add("active");
+      item.innerHTML = `<img src="${cover}" class="d-block w-100" alt="...">`;
+      carouselInner.appendChild(item);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// Esempio di chiamata con un ID artista valido (es: Eminem → 13)
+carusel(artistId, 10);
 
 // // lg
 // async function popularLg(query) {
