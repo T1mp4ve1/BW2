@@ -31,6 +31,10 @@ body {
   overflow: hidden;
 }
 
+body {
+  background: linear-gradient(0deg, #00ff2200 90%, #2F2658);
+}
+
 /* main */
 
 @media (min-width: 992px) {
@@ -56,23 +60,40 @@ main {
 }
 
 /* carousel */
+
+.myIconTopHiden {
+  opacity: 0%;
+}
+
 .myIconTop {
+  opacity: 1%;
   background-color: #12121239;
   transition: all 0.3s;
   cursor: pointer;
+  top: 50%;
 }
 
 .myIconTop:hover {
   background-color: #3737376d
 }
 
+#carouselExampleCaptions {
+  position: relative;
+}
+
+#carouselExampleCaptions:hover .myIconTop {
+  opacity: 50%;
+}
+
 /* card center */
 .cardCarousel {
-  background: linear-gradient(185deg, #ffffff00, #000000 60%);
+  background: linear-gradient(185deg, #ffffff00 20%, #000000 60%);
 }
 
 #annunci {
   font-size: 0.6rem;
+  position: absolute;
+  z-index: 100;
 }
 
 /* lidia */
@@ -147,7 +168,7 @@ aside.fixed-start {
 }
 
 .divHover:hover {
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   background-color: #5e5e5e72
 }
 
@@ -221,12 +242,12 @@ section.fixed-end {
   }
 }
 
-#cardBuonasera {
+.cardBuonasera {
   background-color: #3d3d3d72;
   transition: all 0.3s;
 }
 
-#cardBuonasera:hover {
+.cardBuonasera:hover {
   background-color: #5e5e5e72;
 }
 
@@ -240,19 +261,19 @@ section.fixed-end {
   margin-bottom: 90px;
 }
 
-#colCard {
+.colCard {
   background-color: #131313;
   transition: all 0.3s;
 }
 
-#colCard:hover {
+.colCard:hover {
   background-color: #1a1a1a;
 }
 
 
 
 /* card animation */
-#colCard {
+.colCard {
   position: relative;
 }
 
