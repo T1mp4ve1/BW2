@@ -150,22 +150,25 @@ arrowBack2.addEventListener("click", () => {
   history.back();
 });
 
-// // lg
-// async function popularLg(query) {
-//   try {
-//     // ciclo for
-//     const result = await fetch(`${url}/search?q=${query}`, options);
-//     const data = await result.json();
-//     const songs = data.data;
-
-//     console.log(data);
-//     console.log(data.data);
-//   } catch (err) {
-//     console.error(err);
-// //   }
-// // }
-
-// popularLg("eminem");
+// lista sx
+const scrollable = document.getElementById("scrollable");
+async function scrollBarLeft(query, container) {
+  try {
+    container.innerHTML = "";
+    const res = await fetch(`${url}/search?q=${query}`, options);
+    const convertRes = await res.json();
+    const songs = convertRes.data;
+    // console.log("Brani laterali:", songs);
+    songs.forEach((b) => {
+      container.innerHTML += `<a href="artist.html?id=${b.artist.id}" class="text-decoration-none d-flex align-items-center myLinkHover">
+      <li class="list-group-item border-0 text-truncate myList">${b.title}</li>
+      </a>`;
+    });
+  } catch (err) {
+    console.error("Errore scrollBarLeft:", err);
+  }
+}
+scrollBarLeft("Soul music", scrollable);
 
 // Footer player
 const playPanel = document.getElementById("footer-play");

@@ -141,3 +141,32 @@ p {
   width: 70%;
   height: 70%;
 }
+
+/* barra sx */
+.divHover {
+  transition: all 0.3s;
+}
+
+.divHover:hover {
+  padding-left: 1.1rem;
+  background-color: #5e5e5e72;
+}
+.myLinkHover {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+
+.myLinkHover:hover {
+  background-color: #141414;
+}
+
+.myLinkHover:hover .myList {
+  background-color: #141414;
+  padding-left: 0.5rem;
+}
+.myList {
+  color: #c0c0c0;
+  background-color: #000000;
+  transition: all 0.3s;
+  padding-left: 0;
+}
