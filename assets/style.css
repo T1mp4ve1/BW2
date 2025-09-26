@@ -282,3 +282,22 @@ section.fixed-end {
   top: 10%;
   left: 63%;
 }
+
+.posPlay {
+  opacity: 0;
+  color: #1db954;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.posPlay:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.cardBuonasera:hover .posPlay {
+  opacity: 0.9;
+}
