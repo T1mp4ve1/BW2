@@ -49,12 +49,12 @@ async function popular(id, limite) {
       return;
     }
     // card mobile
-    if (data.data.lenght > 0) {
-      for (let i = 1; i <= data.data.length; i++) {
-        const cardPopular = document.getElementById(`cardPopular${i}`);
-        if (!cardPopular) continue;
 
-        cardPopular.innerHTML = ` <div class="col-1 d-flex justify-content-center align-items-center ">
+    for (let i = 1; i <= data.data.length; i++) {
+      const cardPopular = document.getElementById(`cardPopular${i}`);
+      if (!cardPopular) continue;
+
+      cardPopular.innerHTML = ` <div class="col-1 d-flex justify-content-center align-items-center ">
                   <p>${i}</p>
                 </div>
                 <div class="col-3">
@@ -69,16 +69,11 @@ async function popular(id, limite) {
                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                   </svg>
                 </div>`;
-      }
-    } else {
-      console.log("nessun brano trovato");
     }
 
-    // card lg
-    if (data.data.lenght > 0) {
-      for (let l = 1; l <= data.data.length; l++) {
-        const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
-        cardPopularLg.innerHTML = `<div  class=" col-1 d-flex justify-content-center align-items-center number">
+    for (let l = 1; l <= data.data.length; l++) {
+      const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
+      cardPopularLg.innerHTML = `<div  class=" col-1 d-flex justify-content-center align-items-center number">
                         <p>${l}</p>
                       </div>
                       <div class="col-2 d-flex">
@@ -97,27 +92,26 @@ async function popular(id, limite) {
                     <p class="m-0 fs-5 text-secondary">${data.data[l - 1].duration}</p>
                     </div> `;
 
-        // over card
-        const numberDiv = cardPopularLg.querySelector(".number");
+      // over card
+      const numberDiv = cardPopularLg.querySelector(".number");
 
-        cardPopularLg.addEventListener("mouseenter", () => {
-          cardPopularLg.style.backgroundColor = "#2a2a2a";
+      cardPopularLg.addEventListener("mouseenter", () => {
+        cardPopularLg.style.backgroundColor = "#2a2a2a";
 
-          numberDiv.innerHTML = `<i class="bi bi-play-fill"></i>`;
-        });
-        cardPopularLg.addEventListener("mouseleave", () => {
-          cardPopularLg.style.backgroundColor = "#121212";
+        numberDiv.innerHTML = `<i class="bi bi-play-fill"></i>`;
+      });
+      cardPopularLg.addEventListener("mouseleave", () => {
+        cardPopularLg.style.backgroundColor = "#121212";
 
-          numberDiv.innerHTML = `<p>${l}</p> `;
-        });
-      }
-    } else {
-      console.log("nessun brano trovato");
+        numberDiv.innerHTML = `<p>${l}</p> `;
+      });
     }
   } catch (err) {
     console.error(err);
   }
 }
+
+// card lg
 
 popular(artistId, 5);
 // carosello
