@@ -167,3 +167,29 @@ function MyClose() {
   playPanel.classList.add("d-none");
   minimazedPlayPannel.classList.remove("d-none");
 }
+
+// bottoni avanti e indietro
+// Bottone "indietro"
+const backBtn = document.getElementById("backBtn");
+backBtn.addEventListener("click", () => {
+  history.back();
+});
+
+// Bottone "avanti"
+const forwardBtn = document.getElementById("forwardBtn");
+forwardBtn.addEventListener("click", () => {
+  history.forward();
+});
+
+// casetta
+const homeBtn = document.getElementById("homeBtn");
+
+homeBtn.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+const homeBtnMb = document.getElementById("casettaMobile");
+
+homeBtnMb.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
