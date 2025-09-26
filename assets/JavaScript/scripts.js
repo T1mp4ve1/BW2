@@ -124,7 +124,9 @@ async function VIOLA(query, n) {
                       ${convertRes.data[idx].album.title}
                     </h5>
                   </a>
+                  <a href="artist.html?id=${convertRes.data[idx].artist.id}" class="link-light d-flex align-items-center">
                   <p class="card-text mb-2">${convertRes.data[idx].artist.name}, ${convertRes.data[idx].title}</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -295,7 +297,7 @@ async function scrollBarLeft(query, container) {
     console.error("Errore scrollBarLeft:", err);
   }
 }
-scrollBarLeft("Progressive metal", scrollable);
+scrollBarLeft("popular songs", scrollable);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------play bar Titolo canzone
