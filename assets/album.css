@@ -169,11 +169,11 @@ section.fixed-end {
   cursor: pointer;
 }
 
-.icon-toggle input:checked + i {
+.icon-toggle input:checked+i {
   color: #1db954;
 }
 
-.icon-toggle input:checked + i::after {
+.icon-toggle input:checked+i::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -189,10 +189,33 @@ section.fixed-end {
   cursor: pointer;
 }
 
-.icon-toggle-heart input:checked + i {
+.icon-toggle-heart input:checked+i {
   color: #1db954;
 }
 
 .bg-mygrey {
   background-color: #121212;
+}
+
+#dropdownImg {
+  height: 40px;
+}
+
+.artist {
+  background-color: transparent !important;
+  border: none;
+}
+
+.gradient {
+  background: #825017;
+  background: linear-gradient(180deg, rgba(130, 80, 23, 1) 0%, rgba(0, 212, 255, 0) 30%);
+}
+
+#artistPic {
+  height: 40px;
+  border-radius: 50%;
+}
+
+#albumInfo p {
+  font-size: 12px;
 }
