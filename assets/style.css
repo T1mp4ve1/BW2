@@ -55,6 +55,17 @@ main {
   scrollbar-color: #444 #000;
 }
 
+/* carousel */
+.myIconTop {
+  background-color: #12121239;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.myIconTop:hover {
+  background-color: #3737376d
+}
+
 /* card center */
 #cardCenter {
   background: linear-gradient(185deg, #00000000, #000000 100%);
@@ -75,7 +86,7 @@ main {
 
 body {
   font-family: "CircularStd-Medium";
-  background-color: rgba(21, 23, 26, 0.951);
+  background-color: #121212;
 }
 
 button {
@@ -100,7 +111,7 @@ button {
 }
 
 #playPanel {
-  background-color: rgba(55, 58, 63, 0.951);
+  background-color: #262626;
 }
 
 /* .card {
@@ -122,6 +133,36 @@ aside.fixed-start {
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #444 #000;
+}
+
+.myList {
+  color: #c0c0c0;
+  background-color: #000000;
+  transition: all 0.3s;
+  padding-left: 0;
+}
+
+.divHover {
+  transition: all 0.3s;
+}
+
+.divHover:hover {
+  padding-left: 1.2rem;
+  background-color: #5e5e5e72
+}
+
+.myLinkHover {
+  background-color: #000000;
+  transition: all 0.3s;
+}
+
+.myLinkHover:hover {
+  background-color: #141414;
+}
+
+.myLinkHover:hover .myList {
+  background-color: #141414;
+  padding-left: 0.5rem;
 }
 
 /* right desktop */
@@ -173,11 +214,20 @@ section.fixed-end {
   color: #1db954;
 }
 
-/* buonasera margin */
+/* buonasera*/
 @media (max-width: 991px) {
   #buonaseraTop {
     margin-top: 100px;
   }
+}
+
+#cardBuonasera {
+  background-color: #3d3d3d72;
+  transition: all 0.3s;
+}
+
+#cardBuonasera:hover {
+  background-color: #5e5e5e72;
 }
 
 /* playlistLove */
@@ -188,4 +238,26 @@ section.fixed-end {
 /* altroSection */
 #altroSection {
   margin-bottom: 90px;
+}
+
+#colCard {
+  background-color: #131313;
+  transition: all 0.3s;
+}
+
+#colCard:hover {
+  background-color: #1a1a1a;
+}
+
+
+
+/* card animation */
+#colCard {
+  position: relative;
+}
+
+#cardpPayIcon {
+  position: absolute;
+  top: 10%;
+  left: 63%;
 }
