@@ -96,7 +96,9 @@ async function VIOLA(query, n) {
                     ${convertRes.data[firstIndex].album.title}
                   </h5>
                 </a>
+                <a href="artist.html?id=${convertRes.data[firstIndex].artist.id}" class="link-light d-flex align-items-center">
                 <p class="card-text mb-2">${convertRes.data[firstIndex].artist.name}, ${convertRes.data[firstIndex].title}</p>
+                </a>
               </div>
             </div>
           </div>
@@ -134,7 +136,7 @@ async function VIOLA(query, n) {
   }
 }
 
-VIOLA("jazz music", 3);
+VIOLA("soul music", 3);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------buonasera musica podcast
@@ -152,7 +154,7 @@ async function cardsBuonasera(query, container) {
       const img4 = i + 3;
       container.innerHTML += `
                         <div class="col-12 col-sm-6 col-xl-4">
-                            <div id="cardBuonasera" class="card text-light shadow border-0 overflow-hidden">
+                            <div class="card text-light shadow border-0 overflow-hidden cardBuonasera">
                                 <div class="row d-flex">
                                 <a href="album.html?id=${convertRes.data[img1].album.id}" class="stretched-link"></a>
                                     <div class="col-4 shadow-black">
@@ -175,7 +177,7 @@ async function cardsBuonasera(query, container) {
     console.log("Errore cardsBuonasera:", err);
   }
 }
-cardsBuonasera("house music", marginRow);
+cardsBuonasera("juzz music", marginRow);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------Altro di cio'
@@ -188,7 +190,7 @@ async function cardsAltro(query, container) {
     container.innerHTML = "";
     for (let i = 0; i < 10; i++) {
       container.innerHTML += `<div class="col mb-4">
-                                <div id="colCard" class="card text-light p-2 border-0 shadow-sm">
+                                <div class="card text-light p-2 border-0 shadow-sm colCard">
                                   <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
                                   <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
                                     <div class="row card-body p-0">
@@ -220,7 +222,7 @@ async function playlistLoveFunc(query, container) {
       const img3 = i + 2;
       const img4 = i + 3;
       container.innerHTML += `<div class="container-fluid my-3">
-                        <div class="card bg-dark  border-0 p-4">
+                        <div class="card border-0 p-4 cardBuonasera">
                             <div class="row">
                                 <div id="shadow-white" class="col-6 d-grid p-0"
                                     style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
@@ -309,8 +311,9 @@ async function playBarSong(query) {
     titleArtist.innerHTML = "";
     playSongTitle.innerText = convertRes.data[randomNumVar].title;
     playImg.src = convertRes.data[randomNumVar].album.cover_small;
-    titleArtist.innerHTML = `<p class="m-0 fw-semibold">${convertRes.data[randomNumVar].title}</p>
-                            <p class="m-0 fs-6">${convertRes.data[randomNumVar].artist.name}</p>`;
+    titleArtist.innerHTML = `<a href="album.html?id=${convertRes.data[randomNumVar].album.id}" class="link-light d-flex align-items-center">
+    <p class="m-0 fw-semibold">${convertRes.data[randomNumVar].title}</p></a>
+                            <a href="artist.html?id=${convertRes.data[randomNumVar].artist.id}" class="link-light d-flex align-items-center"><p class="m-0 fs-6">${convertRes.data[randomNumVar].artist.name}</p></a>`;
   } catch (err) {
     console.log("Errore playBarSong:", err);
   }
