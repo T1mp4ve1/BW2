@@ -56,19 +56,30 @@ main {
 }
 
 /* carousel */
+
+.myIconTopHiden {
+  opacity: 0%;
+}
+
 .myIconTop {
+  opacity: 1%;
   background-color: #12121239;
   transition: all 0.3s;
   cursor: pointer;
+  top: 50%;
 }
 
 .myIconTop:hover {
   background-color: #3737376d
 }
 
+#carouselExampleCaptions:hover .myIconTop {
+  opacity: 50%;
+}
+
 /* card center */
 .cardCarousel {
-  background: linear-gradient(185deg, #ffffff00, #000000 60%);
+  background: linear-gradient(185deg, #ffffff00 20%, #000000 60%);
 }
 
 #annunci {
