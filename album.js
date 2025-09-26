@@ -42,6 +42,8 @@ async function album() {
     document.getElementById("playerImg").src = data.cover_small;
     document.getElementById("playerTitle").innerText = data.title;
     document.getElementById("playerArtist").innerHTML = data.artist.name;
+    document.getElementById("playerTitleMobile").innerText = data.title;
+    document.getElementById("playerImgMobile").src = data.cover_small;
 
 
     let minutes = 0
