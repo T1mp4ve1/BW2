@@ -70,7 +70,11 @@ async function popular(id, limite) {
                   </svg>
                 </div>`;
     }
-
+    function convert(seconds) {
+      const min = Math.floor(seconds / 60);
+      const sec = seconds % 60;
+      return `${min}:${sec.toString().padStart(2, "0")}`;
+    }
     for (let l = 1; l <= data.data.length; l++) {
       const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
       cardPopularLg.innerHTML = `<div  class=" col-1 d-flex justify-content-center align-items-center number">
@@ -89,7 +93,7 @@ async function popular(id, limite) {
                     </div>
 
                      <div class="col-1 d-flex justify-content-center align-items-center">  
-                    <p class="m-0 fs-5 text-secondary">${data.data[l - 1].duration}</p>
+                    <p class="m-0 fs-5 text-secondary">${convert(data.data[l - 1].duration)} </p>
                     </div> `;
 
       // over card
