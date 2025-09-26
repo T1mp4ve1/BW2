@@ -53,7 +53,7 @@ async function popular(id, limite) {
       const cardPopular = document.getElementById(`cardPopular${i}`);
       if (!cardPopular) continue;
 
-      cardPopular.innerHTML = ` <div class="col-1 d-flex justify-content-center align-items-center">
+      cardPopular.innerHTML = ` <div class="col-1 d-flex justify-content-center align-items-center ">
                   <p>${i}</p>
                 </div>
                 <div class="col-3">
@@ -72,7 +72,7 @@ async function popular(id, limite) {
     // card lg
     for (let l = 1; l <= limite; l++) {
       const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
-      cardPopularLg.innerHTML = `<div id="number" class=" col-1 d-flex justify-content-center align-items-center">
+      cardPopularLg.innerHTML = `<div  class=" col-1 d-flex justify-content-center align-items-center number">
                         <p>${l}</p>
                       </div>
                       <div class="col-2 d-flex">
@@ -92,15 +92,17 @@ async function popular(id, limite) {
                     </div> `;
 
       // over card
+      const numberDiv = cardPopularLg.querySelector(".number");
+
       cardPopularLg.addEventListener("mouseenter", () => {
         cardPopularLg.style.backgroundColor = "#2a2a2a";
-        const number = document.getElementById("number");
-        number.innerHTML = `<i class="bi bi-play-fill"></i>`;
+
+        numberDiv.innerHTML = `<i class="bi bi-play-fill"></i>`;
       });
       cardPopularLg.addEventListener("mouseleave", () => {
         cardPopularLg.style.backgroundColor = "#121212";
-        const number = document.getElementById("number");
-        number.innerHTML = ` `;
+
+        numberDiv.innerHTML = `<p>${l}</p> `;
       });
     }
   } catch (err) {
