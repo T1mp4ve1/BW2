@@ -111,11 +111,11 @@ async function cardsBuonasera(query, container) {
       const img3 = i + 2;
       const img4 = i + 3;
       container.innerHTML += `
-                        <div class="col-6 col-lg-4">
-                            <div class="card text-light bg-dark shadow border-0 overflow-hidden">
+                        <div class="col-12 col-sm-6 col-xl-4">
+                            <div id="cardBuonasera" class="card text-light shadow border-0 overflow-hidden">
                                 <div class="row d-flex">
                                 <a href="album.html?id=${convertRes.data[img1].album.id}" class="stretched-link"></a>
-                                    <div class="col-4 pe-0 pe-lg-2 pe-xl-4 shadow-black">
+                                    <div class="col-4 shadow-black">
                                         <div class="d-grid p-0"
                                             style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
                                             <img src="${convertRes.data[img1].album.cover_small}" class="img-fluid" alt="" />
@@ -124,7 +124,7 @@ async function cardsBuonasera(query, container) {
                                             <img src="${convertRes.data[img4].album.cover_small}" class="img-fluid" alt="..." />
                                         </div>
                                     </div>
-                                    <div class="col-8 d-flex align-items-center">
+                                    <div class="col-8 d-flex align-items-center ps-0">
                                         <p class="card-title text-truncate fw-semibold">${convertRes.data[i].album.title}</p>
                                     </div>
                                 </div>
@@ -148,12 +148,13 @@ async function cardsAltro(query, container) {
     container.innerHTML = "";
     for (let i = 0; i < 10; i++) {
       container.innerHTML += `<div class="col mb-4">
-                                <div class="card text-light p-2 bg-dark border-0 shadow-sm">
+                                <div id="colCard" class="card text-light p-2 border-0 shadow-sm">
                                   <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
                                   <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
-                                    <div class="card-body p-0">
+                                    <div class="row card-body p-0">
                                       <h6 class="card-title fw-bold text-truncate">${songs[i].album.title}</h6>
                                       <p class="card-text text-secondary text-truncate">${songs[i].title}</p>
+                                      <!-- <i id="cardpPayIcon" class="bi bi-play-circle-fill text-success fs-3"></i> -->
                                     </div>
                                 </div>
                               </div>`;
@@ -244,8 +245,8 @@ async function scrollBarLeft(query, container) {
     const songs = convertRes.data;
     // console.log("Brani laterali:", songs);
     songs.forEach((b) => {
-      container.innerHTML += `<a href="artist.html?id=${b.artist.id}" class="link-secondary d-flex align-items-center">
-      <li class="list-group-item bg-black border-0 text-secondary text-truncate">${b.title}</li>
+      container.innerHTML += `<a href="artist.html?id=${b.artist.id}" class="text-decoration-none d-flex align-items-center myLinkHover">
+      <li class="list-group-item border-0 text-truncate myList">${b.title}</li>
       </a>`;
     });
   } catch (err) {

@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 
@@ -47,37 +47,41 @@
                 <div class="container h-100 d-flex flex-column">
 
                     <i class="bi bi-three-dots fs-3"></i>
-                    <div class="d-flex align-items-center">
-                        <a href="index.html" class="link-light d-flex align-items-center">
+                    <a href="index.html"
+                        class="link-light d-flex align-items-center text-decoration-none rounded-4 divHover">
+                        <div class="d-flex align-items-center rounded-4">
+
                             <i class="bi bi-house-door-fill fs-2"></i>
                             <p class="m-0 ms-4">Home</p>
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <a href="search.html" class="link-light d-flex align-items-center">
+
+                        </div>
+                    </a>
+                    <a href="search.html"
+                        class="link-light d-flex align-items-center text-decoration-none rounded-4 divHover">
+                        <div class="d-flex align-items-center rounded-4">
                             <i class="bi bi-search fs-2"></i>
                             <p class="m-0 ms-4">Cerca</p>
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
+                        </div>
+                    </a>
+                    <div class="d-flex align-items-center mb-4 rounded-4 divHover">
                         <i class="bi bi-collection-play fs-2"></i>
                         <p class="m-0 ms-4">La tua libreria</p>
                     </div>
 
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center rounded-4 divHover">
                         <i class="bi bi-plus-square-fill fs-2"></i>
                         <p class="m-0 ms-4">Crea playlist</p>
                     </div>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center rounded-4 divHover">
                         <i class="bi bi-heart-fill fs-2"></i>
                         <p class="m-0 ms-4">Brani che ti piacciono</p>
                     </div>
-                    <div class="d-flex align-items-center border-bottom border-secondary pb-2">
+                    <div class="d-flex align-items-center pb-2 rounded-4 divHover">
                         <i class="bi bi-bookmark-fill fs-2"></i>
                         <p class="m-0 ms-4">I tuoi episodi</p>
                     </div>
 
-                    <div id="leftList">
+                    <div id="leftList" class=" border-top border-secondary">
                         <ul class="list-group bg-black" id="scrollable">
                             <!-- <li class="list-group-item bg-black border-0 text-secondary text-truncate">An item</li> -->
                         </ul>
@@ -91,8 +95,10 @@
                 <!-- top desktop -->
                 <div class="d-none d-lg-flex container-fluid justify-content-between align-items-center my-4">
                     <div class="text-secondary d-flex align-items-center">
-                        <i class="bi bi-caret-left fs-2"></i>
-                        <i class="bi bi-caret-right fs-2"></i>
+                        <i class="fas fa-chevron-left fs-4 me-3 rounded-5 d-flex justify-content-center align-items-center myIconTop"
+                            style="width: 40px; height: 40px;"></i>
+                        <i class="fas fa-chevron-right fs-4 rounded-5 d-flex justify-content-center align-items-center myIconTop"
+                            style="width: 40px; height: 40px;"></i>
                     </div>
                     <div class="bg-black rounded-5 d-flex justify-content-end align-items-center"
                         style="width:150px; height: 30px;">
