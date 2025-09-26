@@ -67,8 +67,8 @@ main {
 }
 
 /* card center */
-#cardCenter {
-  background: linear-gradient(185deg, #00000000, #000000 100%);
+.cardCarousel {
+  background: linear-gradient(185deg, #ffffff00, #000000 60%);
 }
 
 #annunci {
