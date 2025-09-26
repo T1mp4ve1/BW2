@@ -83,8 +83,9 @@
 
   <!-- Main (desktop center) -->
   <main class="col-lg-7">
+
     <!-- mobile -->
-    <div class="container d-lg-none pt-5">
+    <div class="container d-lg-none pt-5 gradient">
       <span class="cover-arrow position-absolute"><i class="bi bi-arrow-left position-absolute text-white"></i></span>
 
       <div class="text-center p-5 pt-0 d-flex d-lg-none position-relative">
@@ -276,46 +277,91 @@
             <i class="bi bi-three-dots-vertical text-white"></i>
           </div>
         </div> -->
-      </div>  
+      </div>
     </div>
-      <!-- fine mobile -->
-  
-      <!-- desktop -->
-      <section class="d-none d-lg-block bg-black row gy-5 p-5">
-        <!-- card album -->
-        <div class="card col-12 d-flex flex-row align-items-center bg-black text-white" style="max-height: 200px">
-          <img id="imgCardLg" class="img-fluid" style="width: 200px; object-fit: cover" alt="..." />
-          <div class="card-body">
-            <h5 id="pCard" class="card-title">Album</h5>
-            <p id="pArtist" class="card-text">Sabrina Carpenter</p>
+    <!-- fine mobile -->
+
+    <!-- desktop -->
+    <section class="d-none d-lg-block bg-black row gy-5 p-5 gradient">
+      <div class="d-none d-lg-flex justify-content-between">
+        <!-- arrow lg -->
+        <div class="d-flex gap-5">
+          <a class="bg-black" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+              class="bi bi-caret-left position-absolute text-secondary" viewBox="0 0 16 16">
+              <path
+                d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+              class="bi bi-caret-right position-absolute text-secondary" viewBox="0 0 16 16">
+              <path
+                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
+            </svg>
+          </a>
+        </div>
+        <!-- dropdown lg -->
+        <div id="dropdownCard" class="d-flex align-items-center mt-3">
+          <img id="dropdownImg" class="rounded-circle" src="assets/imgs/main/image-19.jpg" alt="" />
+
+          <div class="dropdown">
+            <button class="btn btn-link text-light text-decoration-none dropdown-toggle" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Lidia Nautelia Consumum
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Home</button></li>
+              <li><button class="dropdown-item" type="button">Album</button></li>
+              <li><button class="dropdown-item" type="button">Artist</button></li>
+            </ul>
           </div>
         </div>
+      </div>
+      <!-- card album -->
+      <div class="card col-12 d-flex flex-row align-items-center artist text-white" style="max-height: 200px">
+        <img id="imgCardLg" class="img-fluid" style="width: 200px; object-fit: cover" alt="..." />
+        <div class="card-body">
+          <p>Album</p>
+          <h1 id="pCard" class="card-title">Album</h1>
+          <div id="albumInfo" class="d-flex align-items-center">
+            <img id="artistPic" src="#" alt="">
+            <p id="pArtist" class="card-text m-0">Sabrina Carpenter</p>
+            <i class="bi bi-dot"></i>
+            <p id="releaseYear" class="m-0"></p>
+            <i class="bi bi-dot"></i>
+            <p id="tracksNumber" class="m-0"></p>
+            <p id="tracksDuration" class="m-0 text-secondary ms-1"></p>
+          </div>
 
-        <!-- Controlli principali -->
-        <div class="col-12 d-flex justify-content-start align-items-center mb-3">
-          <div class="d-flex align-items-center me-3">
-            <button class="play-btn"><i class="bi bi-play-fill"></i></button>
-          </div>
-          <div class="d-flex gap-2">
-            <span class="me-3"><i class="bi bi-heart fs-1"></i></span>
-            <span class="me-3"><i class="bi bi-arrow-down-circle fs-1"></i></span>
-            <span><i class="bi bi-three-dots-vertical fs-1"></i></span>
-          </div>
+        </div>
+      </div>
+
+      <!-- Controlli principali -->
+      <div class="col-12 d-flex justify-content-start align-items-center mb-3">
+        <div class="d-flex align-items-center me-3">
+          <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+        </div>
+        <div class="d-flex gap-2">
+          <span class="me-3"><i class="bi bi-heart fs-1"></i></span>
+          <span class="me-3"><i class="bi bi-arrow-down-circle fs-1"></i></span>
+          <span><i class="bi bi-three-dots-vertical fs-1"></i></span>
+        </div>
+      </div>
+
+      <!-- Tracklist Desktop -->
+      <div class="col-12">
+        <!-- Header -->
+        <div class="row text-white align-items-center pb-2" style="border-bottom: 1px solid grey">
+          <div class="col-1 text-center">#</div>
+          <div class="col-5">Titolo</div>
+          <div class="col-3">Riproduzioni</div>
+          <div class="col-2 text-center"><i class="bi bi-clock"></i></div>
         </div>
 
-        <!-- Tracklist Desktop -->
-        <div class="col-12">
-          <!-- Header -->
-          <div class="row text-white align-items-center pb-2" style="border-bottom: 1px solid grey">
-            <div class="col-1 text-center">#</div>
-            <div class="col-5">Titolo</div>
-            <div class="col-3">Riproduzioni</div>
-            <div class="col-2 text-center"><i class="bi bi-clock"></i></div>
-          </div>
-
-          <!-- Tracce -->
-          <div id="trackContainer" class="tracklist">
-            <!-- <div class="row text-white align-items-center py-2" style="border-bottom: 1px solid #222">
+        <!-- Tracce -->
+        <div id="trackContainer" class="tracklist">
+          <!-- <div class="row text-white align-items-center py-2" style="border-bottom: 1px solid #222">
             <div class="col-1 text-center">1</div>
             <div class="col-5 d-flex flex-column">
               <span class="track-title fw-bold">Taste</span>
@@ -345,10 +391,10 @@
             <div class="col-2 text-center">4:02</div>
           </div>
         </div> -->
-            <!-- fine tracce -->
-          </div>
-          <!-- fine tracklist -->
-      </section>
+          <!-- fine tracce -->
+        </div>
+        <!-- fine tracklist -->
+    </section>
   </main>
 
   <!-- right desktop -->
@@ -436,9 +482,10 @@
         <div id="playPanel" class="d-flex flex-row p-3 justify-content-between rounded-4 border-0 text-light w-100">
           <!-- left -->
           <div class="d-flex justify-content-start align-items-center gap-2">
-            <i class="bi bi-vinyl display-5"></i>
-            <h2 class="m-0">Song Title</h2>
+            <img id="playerImgMobile" src="#" alt="cover" width="50" class="rounded" />
+            <h2 id="playerTitleMobile" class="m-0">Song Title</h2>
           </div>
+
           <!-- right -->
           <div class="d-flex justify-content-end align-items-center gap-4">
             <i class="bi bi-cassette display-5 text-secondary"></i>
@@ -486,10 +533,10 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <!-- sinistra: copertina e titolo -->
       <div class="d-flex align-items-center gap-3">
-        <img src="./assets/imgs/main/image-20.jpg" alt="cover" width="50" class="rounded" />
+        <img id="playerImg" src="#" alt="cover" width="50" class="rounded" />
         <div>
-          <p class="m-0 fw-semibold">Espresso</p>
-          <p class="m-0 fs-6">Sabrina Carpenter</p>
+          <p id="playerTitle" class="m-0 fw-semibold"></p>
+          <p id="playerArtist" class="m-0 fs-6"></p>
         </div>
         <!-- cuore -->
         <label class="icon-toggle-heart ms-3">

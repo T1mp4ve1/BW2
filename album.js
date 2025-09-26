@@ -35,9 +35,27 @@ async function album() {
     document.getElementById("mobileTrack").innerText = data.title;
     document.getElementById("mobileArtist").innerText = data.artist.name;
     document.getElementById("artistIcon").src = data.cover_small;
+    document.getElementById("artistPic").src = data.artist.picture;
+    document.getElementById("releaseYear").innerText = data.release_date.split("-")[0];
+    document.getElementById("tracksNumber").innerText = trackArray.length + " brani, ";
+    let duration = document.getElementById("tracksDuration")
+    document.getElementById("playerImg").src = data.cover_small;
+    document.getElementById("playerTitle").innerText = data.title;
+    document.getElementById("playerArtist").innerHTML = data.artist.name;
+    document.getElementById("playerTitleMobile").innerText = data.title;
+    document.getElementById("playerImgMobile").src = data.cover_small;
+
+
+    let minutes = 0
+    let seconds = 0
+
+
+
 
     for (let i = 0; i < trackArray.length; i++) {
       const track = trackArray[i];
+
+      seconds += track.duration
 
       const container = document.getElementById("trackContainer");
 
@@ -67,6 +85,13 @@ async function album() {
       containerMobile.appendChild(createCardMobile);
 
     }
+
+    minuteStr = seconds / 60 + "";
+    minutes = minuteStr.split(".")[0]
+    seconds = ("0." + minuteStr.split(".")[1]) * 60;
+
+    duration.innerText = ` ${minutes} min ${seconds} sec.`
+
 
   } catch (err) {
     console.error(err);
