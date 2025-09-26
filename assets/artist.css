@@ -137,3 +137,7 @@ p {
 .bg-mygrey {
   background-color: #121212;
 }
+#carouselExample {
+  width: 70%;
+  height: 70%;
+}

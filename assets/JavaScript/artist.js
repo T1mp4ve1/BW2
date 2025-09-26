@@ -122,11 +122,13 @@ async function carusel(id, limite) {
     carouselInner.innerHTML = "";
 
     for (let i = 0; i < songs.length; i++) {
-      const cover = songs[i].album.cover_medium;
+      const cover = songs[i].album.cover_big;
       const item = document.createElement("div");
+      const titleAlbum = songs[i].album.title;
       item.classList.add("carousel-item");
       if (i === 0) item.classList.add("active");
-      item.innerHTML = `<img src="${cover}" class="d-block w-100" alt="...">`;
+      item.innerHTML = `<img src="${cover}" class="d-block w-100" alt="..."> <p class="text-center mt-1 fs-3">${titleAlbum} </p>`;
+      //   item.innerText = titleAlbum;
       carouselInner.appendChild(item);
     }
   } catch (err) {
@@ -135,7 +137,18 @@ async function carusel(id, limite) {
 }
 
 // Esempio di chiamata con un ID artista valido (es: Eminem → 13)
-carusel(artistId, 10);
+carusel(artistId, 5);
+
+// arrowBack
+const arrowBack = document.getElementById("arrowBack");
+arrowBack.addEventListener("click", () => {
+  history.back();
+});
+
+const arrowBack2 = document.getElementById("arrowBack2");
+arrowBack2.addEventListener("click", () => {
+  history.back();
+});
 
 // // lg
 // async function popularLg(query) {

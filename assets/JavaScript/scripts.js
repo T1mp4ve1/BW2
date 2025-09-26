@@ -64,84 +64,79 @@ async function VIOLA(query, n) {
   try {
     const res = await fetch(`${BASE}/search?q=${query}`, headers);
     const convertRes = await res.json();
-    // console.log("VIOLA", convertRes);
-    const rundomNum = randomNum(25);
+
+    const max = convertRes.data.length;
+    const used = new Set();
+
+    function getUniqueRandom(max) {
+      if (used.size >= max) {
+        throw new Error("No more unique numbers available");
+      }
+      let num;
+      do {
+        num = randomNum(max);
+      } while (used.has(num));
+      used.add(num);
+      return num;
+    }
+
+    const firstIndex = getUniqueRandom(max);
     container.innerHTML = `
-                              <div class="carousel-item active">
-                                <div class="card border-0 w-100 mb-3 text-light p-3 position-relative cardCarousel">
-                                    <p id="annunci"
-                                        class="btn position-absolute text-secondary end-0 me-3  p-2 rounded-5 shadow">
-                                        NASCONDI ANNUNCI</p>
-                                    <div class="row g-0">
-                                        <div class="col-md-3">
-                                            <img src="${convertRes.data[rundomNum].album.cover_medium}"
-                                                class="img-fluid" alt="...">
-                                        </div>
-                                        <div class="col-md-9 d-flex align-items-center">
-                                            <div class="card-body p-0 ms-3">
-                                                <p><small>ALBUM</small></p>
-                                                <a href="album.html?id=${convertRes.data[rundomNum].album.id}"
-                                                    class="link-light d-flex align-items-center">
-                                                    <h5 class="card-title text-truncate fw-bold display-3" style="overflow: hidden;">${convertRes.data[rundomNum].album.title}
-                                                    </h5>
-                                                </a>
-                                                <a href="artist.html?id=${convertRes.data[rundomNum].artist.id}"
-                                                    class="link-light d-flex align-items-center">
-                                                    <p class="card-text mb-2">${convertRes.data[rundomNum].artist.name}, ${convertRes.data[rundomNum].title}</p>
-                                                </a>
-                                                <div class="d-flex justify-content-start">
-                                                    <button class="btn btn-success rounded-5 px-4 me-3">Play</button>
-                                                    <button
-                                                        class="btn btn-black rounded-5  px-4  me-3 text-light border">Salva</button>
-                                                    <i class="bi bi-three-dots fs-3 d-flex align-items-center"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>`;
+      <div class="carousel-item active">
+        <div class="card border-0 w-100 mb-3 text-light p-3 position-relative cardCarousel">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="${convertRes.data[firstIndex].album.cover_medium}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-9 d-flex align-items-center">
+              <div class="card-body p-0 ms-3">
+                <p><small>ALBUM</small></p>
+                <a href="album.html?id=${convertRes.data[firstIndex].album.id}" class="link-light d-flex align-items-center">
+                  <h5 class="card-title text-truncate fw-bold fs-1" style="overflow: hidden;">
+                    ${convertRes.data[firstIndex].album.title}
+                  </h5>
+                </a>
+                <a href="artist.html?id=${convertRes.data[firstIndex].artist.id}" class="link-light d-flex align-items-center">
+                <p class="card-text mb-2">${convertRes.data[firstIndex].artist.name}, ${convertRes.data[firstIndex].title}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
     for (let i = 0; i < n; i++) {
-      const rundomNum = randomNum(25);
+      if (used.size >= max) break;
+
+      const idx = getUniqueRandom(max);
       container.innerHTML += `
-                            <div class="carousel-item">
-                                <div class="card border-0 w-100 mb-3 text-light p-3 position-relative cardCarousel">
-                                    <p id="annunci"
-                                        class="btn position-absolute text-secondary end-0 me-3  p-2 rounded-5 shadow">
-                                        NASCONDI ANNUNCI</p>
-                                    <div class="row g-0">
-                                        <div class="col-md-3">
-                                            <img src="${convertRes.data[rundomNum].album.cover_medium}"
-                                                class="img-fluid" alt="...">
-                                        </div>
-                                        <div class="col-md-9 d-flex align-items-center">
-                                            <div class="card-body p-0 ms-3">
-                                                <p><small>ALBUM</small></p>
-                                                <a href="album.html?id=${convertRes.data[rundomNum].album.id}"
-                                                    class="link-light d-flex align-items-center">
-                                                    <h5 class="card-title text-truncate fw-bold display-3 style="overflow: hidden;"">${convertRes.data[rundomNum].album.title}
-                                                    </h5>
-                                                </a>
-                                                <a href="artist.html?id=${convertRes.data[rundomNum].artist.id}"
-                                                    class="link-light d-flex align-items-center">
-                                                    <p class="card-text mb-2">${convertRes.data[rundomNum].artist.name}, ${convertRes.data[rundomNum].title}</p>
-                                                </a>
-                                                <div class="d-flex justify-content-start">
-                                                    <button class="btn btn-success rounded-5 px-4 me-3">Play</button>
-                                                    <button
-                                                        class="btn btn-black rounded-5  px-4  me-3 text-light border">Salva</button>
-                                                    <i class="bi bi-three-dots fs-3 d-flex align-items-center"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>`;
+        <div class="carousel-item">
+          <div class="card border-0 w-100 mb-3 text-light p-3 position-relative cardCarousel">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="${convertRes.data[idx].album.cover_medium}" class="img-fluid" alt="">
+              </div>
+              <div class="col-md-9 d-flex align-items-center">
+                <div class="card-body p-0 ms-3">
+                  <p><small>ALBUM</small></p>
+                  <a href="album.html?id=${convertRes.data[idx].album.id}" class="link-light d-flex align-items-center">
+                    <h5 class="card-title text-truncate fw-bold fs-1" style="overflow: hidden;">
+                      ${convertRes.data[idx].album.title}
+                    </h5>
+                  </a>
+                  <p class="card-text mb-2">${convertRes.data[idx].artist.name}, ${convertRes.data[idx].title}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
     }
   } catch (err) {
     console.log("Errore VIOLA:", err);
   }
 }
-VIOLA("popular music", 5);
+
+VIOLA("soul music", 3);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------buonasera musica podcast
@@ -159,7 +154,7 @@ async function cardsBuonasera(query, container) {
       const img4 = i + 3;
       container.innerHTML += `
                         <div class="col-12 col-sm-6 col-xl-4">
-                            <div id="cardBuonasera" class="card text-light shadow border-0 overflow-hidden">
+                            <div class="card text-light shadow border-0 overflow-hidden cardBuonasera">
                                 <div class="row d-flex">
                                 <a href="album.html?id=${convertRes.data[img1].album.id}" class="stretched-link"></a>
                                     <div class="col-4 shadow-black">
@@ -182,7 +177,7 @@ async function cardsBuonasera(query, container) {
     console.log("Errore cardsBuonasera:", err);
   }
 }
-cardsBuonasera("house music", marginRow);
+cardsBuonasera("juzz music", marginRow);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------Altro di cio'
@@ -195,7 +190,7 @@ async function cardsAltro(query, container) {
     container.innerHTML = "";
     for (let i = 0; i < 10; i++) {
       container.innerHTML += `<div class="col mb-4">
-                                <div id="colCard" class="card text-light p-2 border-0 shadow-sm">
+                                <div class="card text-light p-2 border-0 shadow-sm colCard">
                                   <img src="${songs[i].album.cover_medium}" class="card-img-top mb-2" alt="img">
                                   <a href="artist.html?id=${songs[i].artist.id}" class="stretched-link"></a>
                                     <div class="row card-body p-0">
@@ -210,7 +205,7 @@ async function cardsAltro(query, container) {
     console.error("Errore cardsAltro:", err);
   }
 }
-cardsAltro("TOOL", AltroRow);
+cardsAltro("soul music", AltroRow);
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------playlistLove
@@ -227,7 +222,7 @@ async function playlistLoveFunc(query, container) {
       const img3 = i + 2;
       const img4 = i + 3;
       container.innerHTML += `<div class="container-fluid my-3">
-                        <div class="card bg-dark  border-0 p-4">
+                        <div class="card border-0 p-4 cardBuonasera">
                             <div class="row">
                                 <div id="shadow-white" class="col-6 d-grid p-0"
                                     style="grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
@@ -316,8 +311,9 @@ async function playBarSong(query) {
     titleArtist.innerHTML = "";
     playSongTitle.innerText = convertRes.data[randomNumVar].title;
     playImg.src = convertRes.data[randomNumVar].album.cover_small;
-    titleArtist.innerHTML = `<p class="m-0 fw-semibold">${convertRes.data[randomNumVar].title}</p>
-                            <p class="m-0 fs-6">${convertRes.data[randomNumVar].artist.name}</p>`;
+    titleArtist.innerHTML = `<a href="album.html?id=${convertRes.data[randomNumVar].album.id}" class="link-light d-flex align-items-center">
+    <p class="m-0 fw-semibold">${convertRes.data[randomNumVar].title}</p></a>
+                            <a href="artist.html?id=${convertRes.data[randomNumVar].artist.id}" class="link-light d-flex align-items-center"><p class="m-0 fs-6">${convertRes.data[randomNumVar].artist.name}</p></a>`;
   } catch (err) {
     console.log("Errore playBarSong:", err);
   }
