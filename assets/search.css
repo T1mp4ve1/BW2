@@ -133,3 +133,27 @@
 .bg-color-9 {
   background-color: #e91429;
 }
+
+/* pulsante casetta animato */
+#homeBtn {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#homeBtn:hover {
+  transform: scale(1.1);
+  background-color: #1db954;
+}
+
+/* card animate */
+.card,
+.artist-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover,
+.artist-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
+}
