@@ -16,7 +16,7 @@ const options = {
     "x-rapidapi-host": host,
   },
 };
-
+// header artista
 async function artist() {
   const imgCard = document.getElementById("imgCard");
 
@@ -48,6 +48,7 @@ async function popular(id, limite) {
                     </p>`;
       return;
     }
+    // card mobile
     for (let i = 1; i <= limite; i++) {
       const cardPopular = document.getElementById(`cardPopular${i}`);
       if (!cardPopular) continue;
@@ -68,27 +69,39 @@ async function popular(id, limite) {
                   </svg>
                 </div>`;
     }
+    // card lg
     for (let l = 1; l <= limite; l++) {
       const cardPopularLg = document.getElementById(`cardPopularLg${l}`);
-      cardPopularLg.innerHTML = `<div class="col-1 d-flex justify-content-center align-items-center">
+      cardPopularLg.innerHTML = `<div id="number" class=" col-1 d-flex justify-content-center align-items-center">
                         <p>${l}</p>
                       </div>
                       <div class="col-2 d-flex">
-                        <img class="w-100" src="${data.data[l - 1].album.cover_small}" alt="" />
+                        <img  class="w-100" src="${data.data[l - 1].album.cover_small}" alt="" />
                           </div>
                     
-                    <div class="col-5 d-flex">
+                    <div class="col-5 d-flex justify-content-start align-items-center">
                        
-                    <p class="m-0 fs-3 fw-semibold text-truncate">${data.data[l - 1].title}</p>
+                    <p class="m-0 fs-5  fw-semibold text-truncate">${data.data[l - 1].title}</p>
                     </div>
-                        <div class="col-3 d-flex">
+                        <div class="col-3 d-flex justify-content-center align-items-center">
                     <p class="m-0 fs-5 text-secondary">${data.data[l - 1].rank}</p>
                     </div>
 
-                     <div class="col-1 d-flex">  
+                     <div class="col-1 d-flex justify-content-center align-items-center">  
                     <p class="m-0 fs-5 text-secondary">${data.data[l - 1].duration}</p>
-                      </div> `;
-      // console.log(song.album.cover_small);
+                    </div> `;
+
+      // over card
+      cardPopularLg.addEventListener("mouseenter", () => {
+        cardPopularLg.style.backgroundColor = "#2a2a2a";
+        const number = document.getElementById("number");
+        number.innerHTML = `<i class="bi bi-play-fill"></i>`;
+      });
+      cardPopularLg.addEventListener("mouseleave", () => {
+        cardPopularLg.style.backgroundColor = "#121212";
+        const number = document.getElementById("number");
+        number.innerHTML = ` `;
+      });
     }
   } catch (err) {
     console.error(err);
