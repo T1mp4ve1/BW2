@@ -57,6 +57,13 @@ async function album() {
 
       seconds += track.duration
 
+      let minuteStrCard = track.duration / 60 + "";
+      let minuteCardDuration = minuteStrCard.split(".")[0]
+      let secondCardDuration = Math.round(("0." + minuteStrCard.split(".")[1]) * 60);
+
+      duration.innerText = ` ${minutes} min ${seconds} sec.`
+
+
       const container = document.getElementById("trackContainer");
 
       const createCard = document.createElement("div");
@@ -67,7 +74,7 @@ async function album() {
               <span class="track-artist text-secondary">${data.artist.name}</span>
             </div>
             <div class="col-3">1.2M</div>
-            <div class="col-2 text-center">3:45</div>`;
+            <div class="col-2 text-center">${minuteCardDuration}:${secondCardDuration}</div>`;
 
 
       const createCardMobile = document.createElement("div");
